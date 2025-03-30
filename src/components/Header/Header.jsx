@@ -11,7 +11,7 @@ function Header() {
   const navItems = ["Home", "About", "Services", "Contact", "Blog"];
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className=" bg-gray-900 fixed w-full z-20 top-0 start-0 text-white">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         {/* Logo */}
         <Link
@@ -53,11 +53,11 @@ function Header() {
 
         {/* Navigation Links */}
         <div
-          className={`absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-md md:relative md:top-0 md:flex md:items-center md:w-auto md:flex-grow md:justify-center ${
+          className={`absolute top-16 left-0 w-full text-white bg-gray-900 shadow-md md:relative md:top-0 md:flex md:items-center md:w-auto md:flex-grow md:justify-center ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-900 md:border-0  md:dark:bg-gray-900 dark:border-gray-700 text-white">
             {navItems.map((nav, index) => (
               <li key={index}>
                 <NavLink
@@ -66,7 +66,7 @@ function Header() {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-700 font-bold"
-                      : "text-gray-900 dark:text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                      : "text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                   }
                 >
                   {nav}

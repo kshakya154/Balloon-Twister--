@@ -3,7 +3,7 @@ import { Link } from "react-router";
 function Footer() {
   return (
     <div>
-      <footer class="bg-white dark:bg-gray-900">
+      <footer class="bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
@@ -13,7 +13,7 @@ function Footer() {
                   class="h-8 me-3"
                   alt="FlowBite Logo"
                 />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
                   Balloon Twister
                 </span>
               </Link>
@@ -47,7 +47,7 @@ function Footer() {
                       target="_blank"
                       class="hover:underline "
                     >
-                      Github
+                      Instagram
                     </a>
                   </li>
                   <li>
@@ -56,7 +56,7 @@ function Footer() {
                       target="_blank"
                       class="hover:underline"
                     >
-                      Discord
+                      Facebook
                     </a>
                   </li>
                 </ul>
