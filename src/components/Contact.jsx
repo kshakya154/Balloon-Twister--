@@ -68,7 +68,9 @@ export default function Contact() {
         )}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-white">Name</label>
+            <label className="block text-sm font-medium text-white text-left">
+              Name
+            </label>
             <input
               placeholder="Enter your name"
               {...register("Name", { required: "Name is required" })}
@@ -80,7 +82,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white">
+            <label className="block text-sm font-medium text-white text-left">
               Email
             </label>
             <input
@@ -101,7 +103,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white mb-2">
+            <label className="block text-sm font-medium text-white mb-2 text-left">
               Subject
             </label>
             <div className="flex space-x-4">
@@ -126,7 +128,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white">
+            <label className="block text-sm font-medium text-white text-left">
               Message
             </label>
             <textarea
