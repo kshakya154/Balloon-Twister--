@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router";
 function Home() {
   return (
-    <div className="w-full bg ">
-      <section class="text-gray-600 body-font h-screen flex bg-gray-900  bg-svg-constellation-gray-100 relative ">
+    <div className="w-full ">
+      <section class="text-gray-600 body-font h-[calc(100vh-150px)] flex bg-gray-900  bg-svg-constellation-gray-100 relative ">
         <div class="container mx-auto flex px-5 py-12 items-center justify-center flex-col">
           <div class="lg:w-2/3 w-full animate-fade-in-down">
             <h1 class="md:text-6xl text-3xl mb-2 font-bold text-white tracking-tight leading-tight">

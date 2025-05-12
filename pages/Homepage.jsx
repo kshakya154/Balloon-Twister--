@@ -6,6 +6,7 @@ import About from "../src/components/About";
 import Testimonial from "../src/components/Testimonial";
 import { motion } from "framer-motion";
 import FAQ from "../src/components/FAQ";
+import Slider from "../src/components/Slider";
 function Homepage() {
   return (
     <div>
@@ -14,6 +15,7 @@ function Homepage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        <Slider></Slider>
         <Home></Home>
         <Work></Work>
         <Services></Services>
