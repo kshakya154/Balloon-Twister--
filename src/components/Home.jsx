@@ -30,7 +30,7 @@ function Home() {
               to="/booking"
               class="uppercase rounded-sm bg-green-400 font-bold text-white px-8 py-4 mx-auto hidden md:inline"
             >
-              Book now
+              Inquire now
             </Link>
           </div>
         </div>
