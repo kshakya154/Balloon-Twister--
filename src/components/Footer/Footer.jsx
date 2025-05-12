@@ -36,7 +36,7 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Follow us
                 </h2>
@@ -60,7 +60,7 @@ function Footer() {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Legal
