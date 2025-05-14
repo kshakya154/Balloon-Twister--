@@ -10,7 +10,7 @@ function Services() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h4 className="text-white text-6xl font-bold mt-14">Services</h4>
+        <h4 className="text-white text-6xl font-bold mt-14 ml-32">Services</h4>
         <div className="relative overflow-hidden bg-gray-900 pt-16 pb-32 space-y-24">
           <div className="relative">
             <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">

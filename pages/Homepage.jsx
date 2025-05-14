@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../src/components/Home";
+// import Home from "../src/components/Home";
 import Work from "../src/components/work/Work";
 import Services from "../src/components/Services";
 import About from "../src/components/About";
@@ -16,7 +16,7 @@ function Homepage() {
         transition={{ duration: 0.5 }}
       >
         <Slider></Slider>
-        <Home></Home>
+        {/* <Home></Home> */}
         <Work></Work>
         <Services></Services>
         <Testimonial></Testimonial>

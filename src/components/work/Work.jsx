@@ -4,7 +4,7 @@ function Work() {
   return (
     <div>
       <section className="bg-gray-900 overflow-hidden">
-        <h2 className="text-white text-6xl font-bold mb-16">Our Work</h2>
+        <h2 className="text-white text-6xl font-bold mb-16 mt-20 flex justify-center">Our Work</h2>
         <div className="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-11/12 flex flex-col justify-center">
           <div className="flex flex-col sm:flex-row mx-auto">
             <div>
