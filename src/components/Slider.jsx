@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
+
 export default function Slider() {
   const images = [
     "/images/img2.jpg",
@@ -18,14 +20,15 @@ export default function Slider() {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2500); // Change slide every 2s
+    }, 2500);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer);
   }, [images.length]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-md mt-24 mb-0">
-      <div className="relative w-full h-64 sm:h-80 md:h-96">
+    <div className="w-[calc(100vw-15px)] h-screen overflow-hidden relative rounded-b-xl mt-14">
+      <div className="w-full h-full relative">
+        {/* Background Images */}
         {images.map((img, index) => (
           <img
             key={index}
@@ -36,8 +39,22 @@ export default function Slider() {
             }`}
           />
         ))}
-        <div >
-          {/* Slide {currentIndex} */}
+
+        {/* Centered Link Buttons */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center gap-6">
+          <Link
+            to="/contact"
+            className="bg-gray-900 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-200 hover:text-black transition"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/booking"
+            className="bg-blue-700 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-200
+            hover:text-black transition"
+          >
+            Inquire Now
+          </Link>
         </div>
       </div>
     </div>

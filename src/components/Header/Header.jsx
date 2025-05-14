@@ -11,7 +11,7 @@ function Header() {
   const navItems = ["Home", "About", "Services", "Contact", "Blog"];
 
   return (
-    <nav className=" bg-gray-900 fixed w-full z-20 top-0 start-0 text-white">
+    <nav className=" bg-gray-900 fixed w-full z-30 top-0 start-0 text-white ">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         {/* Logo */}
         <Link
