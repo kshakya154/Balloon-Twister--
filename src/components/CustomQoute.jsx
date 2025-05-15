@@ -59,7 +59,7 @@ export default function CustomQoute() {
         </div>
           <br />
           <br />
-        <Link to="/contact" className="mt-10 bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">
+        <Link to="/contact" className="mt-10 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition ">
           Inquire Now
         </Link>
       </div>

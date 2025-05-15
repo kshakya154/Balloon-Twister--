@@ -8,7 +8,7 @@ import Testimonial from "./components/Testimonial";
 import Services from "./components/Services";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Homepage from "../pages/Homepage";
 import Booking from "./components/Booking";
@@ -17,6 +17,10 @@ import AdminLogin from "./components/AdminLogin";
 import AddBlog from "./components/Blog/AddBlog";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Gallery from "./components/Gallery";
+// import ServiceCard from "./components/ServiceCard"; 
+
+import ServicesPage from "../pages/ServicePage";
+import ServiceDetails from "../pages/ServiceDetails";
 function App() {
   return (
     <Routes>
@@ -25,12 +29,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/booking" element={<Booking />} />
-        <Route path="/services" element={<Services />} />
+        {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        {/* <Route path="/addblog" element={<AddBlog />} /> */}
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:service" element={<ServiceDetails />} />
+        <Route path="/booking" element={<div>Booking Page</div>} />
+        {/* <Route path="/services" element={<ServicesPage />} /> */}
+
         
 
         {/* Protect the /addblog route */}
