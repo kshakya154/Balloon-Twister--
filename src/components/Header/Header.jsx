@@ -8,7 +8,7 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
-  const navItems = ["Home", "About", "Services", "Contact", "Blog"];
+  const navItems = ["Home", "About", "Services", "Contact", "Blog","Gallery"];
 
   return (
     <nav className=" bg-gray-900 fixed w-full z-30 top-0 start-0 text-white ">

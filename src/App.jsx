@@ -16,6 +16,7 @@ import Blog from "./components/Blog/Blog";
 import AdminLogin from "./components/AdminLogin";
 import AddBlog from "./components/Blog/AddBlog";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Gallery from "./components/Gallery";
 function App() {
   return (
     <Routes>
@@ -29,6 +30,8 @@ function App() {
         <Route path="/adminlogin" element={<AdminLogin />} />
         {/* <Route path="/addblog" element={<AddBlog />} /> */}
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/gallery" element={<Gallery />} />
+        
 
         {/* Protect the /addblog route */}
         <Route
