@@ -7,6 +7,7 @@ import Testimonial from "../src/components/Testimonial";
 import { motion } from "framer-motion";
 import FAQ from "../src/components/FAQ";
 import Slider from "../src/components/Slider";
+import CustomQoute from "../src/components/CustomQoute";
 function Homepage() {
   return (
     <div>
@@ -21,6 +22,7 @@ function Homepage() {
         <Services></Services>
         <Testimonial></Testimonial>
         <About></About>
+        <CustomQoute/>
         <FAQ></FAQ>
       </motion.div>
     </div>
