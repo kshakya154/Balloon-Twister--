@@ -58,12 +58,12 @@ export default function Slider() {
               </p>
 
               <div className="flex justify-center gap-6">
-                <Link
+                {/* <Link
                   to="/contact"
                   className="bg-gray-900 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-200 hover:text-black transition"
                 >
                   About Us
-                </Link>
+                </Link> */}
                 <Link
                   to="/booking"
                   className="bg-blue-700 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-200 hover:text-black transition"
