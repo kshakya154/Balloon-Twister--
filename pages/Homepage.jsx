@@ -2,7 +2,7 @@ import React from "react";
 // import Home from "../src/components/Home";
 import Work from "../src/components/work/Work";
 import Services from "../src/components/Services";
-import About from "../src/components/About";
+// import About from "../src/components/About";
 import Testimonial from "../src/components/Testimonial";
 import { motion } from "framer-motion";
 import FAQ from "../src/components/FAQ";
@@ -21,7 +21,7 @@ function Homepage() {
         <Work></Work>
         <Services></Services>
         <Testimonial></Testimonial>
-        <About></About>
+        {/* <About></About> */}
         <CustomQoute/>
         <FAQ></FAQ>
       </motion.div>
