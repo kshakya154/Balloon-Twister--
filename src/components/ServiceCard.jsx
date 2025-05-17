@@ -17,7 +17,7 @@ export default function ServiceCard({ title, description, image, link }) {
           </Link>
           <Link
             to={link}
-            className=" text-base  px-4 py-2 rounded-lg hover:bg-blue-800 text-black hover:text-black transition hover:text-white bg-white "
+            className=" text-base  px-4 py-2 rounded-lg hover:bg-blue-800 text-black  transition hover:text-white bg-white "
           >
             Read More
           </Link>

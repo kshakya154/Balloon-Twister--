@@ -9,7 +9,7 @@ function Footer() {
             <div class="mb-6 md:mb-0">
               <Link to="/" class="flex items-center">
                 <img
-                  src="https://www.freeiconspng.com/thumbs/balloon-png/birthday-balloon-png-21.png"
+                  src="/images/logo.png"
                   class="h-8 me-3"
                   alt="FlowBite Logo"
                 />

@@ -19,7 +19,7 @@ function Header() {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
-            src="https://www.freeiconspng.com/uploads/balloon-png-7.png"
+            src="/images/logo.png"
             className="h-8"
             alt="Logo"
           />
