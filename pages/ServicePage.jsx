@@ -12,7 +12,7 @@ const services = [
   {
     title: "Corporate Events",
     description: "Add flair to your events with our classy balloon setups.",
-    image: "/images/img1.png",
+    image: "/images/img9.jpeg",
     link: "/services/corporate",
   },
   {
@@ -26,6 +26,30 @@ const services = [
     description: "Celebrate love with elegant and romantic balloon designs.",
     image: "/images/img2.jpg",
     link: "/services/anniversary",
+  },
+  {
+    title: "Weddings & Engagements",
+    description: "Celebrate love with elegant balloon artistry.",
+    image: "/images/v28.jpg",
+    link: "/services/wedding-engagement",
+  },
+  {
+    title: " School & Community Events",
+    description: "Where community fun meets balloon creativity.",
+    image: "/images/v27.jpg",
+    link: "/services/school-events",
+  },
+  {
+    title: "Custom Balloon Bouquets",
+    description: "Send love, one balloon at a time.",
+    image: "/images/v26.jpg",
+    link: "/services/custom-balloon-bouquets",
+  },
+  {
+    title: "Balloon Sculptures & Art Installations",
+    description: "Bigger, bolder, balloon creations.",
+    image: "/images/v21.jpg",
+    link: "/services/balloon-sculptures-art-installation",
   },
 ];
 

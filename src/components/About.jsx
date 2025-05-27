@@ -23,7 +23,7 @@ const About = () => {
           We transform your moments into magical celebrations with custom balloon decorations for every occasion.
         </p>
         <img
-          src="images/img1.png"
+          src="images/img10.jpeg"
           alt="Balloon decoration"
           className="rounded-2xl mt-8 shadow-lg w-full max-w-3xl mx-auto"
         />
@@ -81,7 +81,7 @@ const About = () => {
               <li>✅ Fast Setup & Delivery</li>
             </ul>
             <img
-              src="images/img5.png"
+              src="images/h2.jpg"
               alt="Why Choose Us"
               className="rounded-xl shadow-lg"
             />
@@ -98,7 +98,7 @@ const About = () => {
           Our team of artists, planners, and balloon stylists bring joy and color to every celebration.
         </p>
         <img
-          src="images/img7.png"
+          src="images/h9.jpg"
           alt="Team"
           className="rounded-xl shadow-lg w-full"
         />
@@ -136,7 +136,7 @@ const About = () => {
       <section className="max-w-6xl mx-auto mb-20">
         <h2 className="text-2xl font-semibold text-blue-600 mb-6">🖼️ Gallery Sneak Peek</h2>
         <div className="grid md:grid-cols-3 gap-4">   
-            <img src="/images/img1.png"/>
+            <img src="/images/img10.jpeg"/>
             <img src="/images/img4.jpg"/>
             <img src="/images/img3.jpg"/>
         </div>

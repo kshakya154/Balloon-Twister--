@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 const galleryImages = [
   {
-    src: '/images/img1.png',
+    src: '/images/v3.jpg',
     alt: 'Birthday balloon arch',
   },
   {
@@ -18,15 +18,15 @@ const galleryImages = [
     alt: 'Corporate event balloon backdrop',
   },
   {
-    src: '/images/img5.png',
+    src: '/images/v9.jpg',
     alt: 'Corporate event balloon backdrop',
   },
   {
-    src: '/images/img6.png',
+    src: '/images/h7.jpg',
     alt: 'Corporate event balloon backdrop',
   },
   {
-    src: '/images/img7.png',
+    src: '/images/h8.jpg',
     alt: 'Corporate event balloon backdrop',
   },
   {
@@ -39,6 +39,14 @@ const galleryImages = [
   },
   {
     src: '/images/img10.jpeg',
+    alt: 'Corporate event balloon backdrop',
+  },
+  {
+    src: '/images/h13.jpg',
+    alt: 'Corporate event balloon backdrop',
+  },
+  {
+    src: '/images/v24.jpg',
     alt: 'Corporate event balloon backdrop',
   },
   // Add more as needed

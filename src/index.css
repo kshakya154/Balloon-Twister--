@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@layer utilities {
+  .glow {
+    text-shadow: 0 0 1px #3824e7, 0 0 16px #180fce, 0 0 32px #2910c7;
+  }
+}
