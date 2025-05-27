@@ -17,6 +17,7 @@ import AdminLogin from "./components/AdminLogin";
 import AddBlog from "./components/Blog/AddBlog";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Gallery from "./components/Gallery";
+import SingleBlog from "./components/Blog/SingleBlog";
 // import ServiceCard from "./components/ServiceCard"; 
 
 import ServicesPage from "../pages/ServicePage";
@@ -37,6 +38,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/:service" element={<ServiceDetails />} />
         <Route path="/booking" element={<div>Booking Page</div>} />
+        <Route path="/blog/:id" element={<SingleBlog />} />
         {/* <Route path="/services" element={<ServicesPage />} /> */}
 
         

@@ -26,26 +26,51 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (data) => {
-    try {
-      await databases.createDocument(
-        import.meta.env.VITE_APPWRITE_DATABASE_ID,
-        import.meta.env.VITE_APPWRITE_COLLECTION_ID_CONTACT,
-        ID.unique(),
-        data
-      );
-      setIsSubmitting(true);
-      setSuccessMessage("Message sent successfully!");
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSuccessMessage("");
-        reset();
-        setSelectedSubject("");
-      }, 3000);
-    } catch (error) {
-      console.error("Error creating contact document:", error);
+const [backendError, setBackendError] = useState("");
+
+const onSubmit = async (data) => {
+  try {
+    setBackendError("");
+    setIsSubmitting(true);
+
+    const response = await fetch("http://localhost:4000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Something went wrong");
     }
-  };
+
+    setSuccessMessage(result.message || "Message sent successfully!");
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSuccessMessage("");
+      reset();
+      setSelectedSubject("");
+    }, 3000);
+  } catch (error) {
+    console.error("Error submitting contact form:", error);
+    setBackendError(error.message);
+    setIsSubmitting(false);
+  }
+};
+
+{backendError && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="bg-red-600 text-white p-3 rounded mb-4"
+  >
+    {backendError}
+  </motion.div>
+)}
+
 
   const handleSubjectChange = (value) => {
     setSelectedSubject(value);
@@ -101,7 +126,7 @@ export default function Contact() {
           {/* Google Map */}
           <div className="mt-8">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.124306643507!2d76.37669701445346!3d30.327985581775037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910288b7f85ae69%3A0x55de7f30e15b9f1a!2sSanauri%20Adda!5e0!3m2!1sen!2sin!4v1684265012345!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7020.9363380681225!2d76.85043686439528!3d30.33606172659369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fb66b63897745%3A0xd0753d11a2f8cfa9!2sNetaji%20Subhash%20Chandra%20Bose%20Park!5e0!3m2!1sen!2sin!4v1748253882674!5m2!1sen!2sin"
               width="100%"
               height="250"
               style={{ border: 0 }}

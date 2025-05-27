@@ -25,41 +25,50 @@ function Booking() {
     "Baddi",
   ];
 
-  const onSubmit = async (data) => {
-    try {
-      // Formatting data to match Appwrite's required structure
-      const formattedData = {
-        Name: data.name, // Capitalized to match Appwrite field
-        email: data.email,
-        phone: data.phone,
-        event: data.eventType, // Matching Appwrite's schema
-        date: new Date(data.eventDate).toISOString(), // Convert to correct format
-        location: data.eventLocation,
-        types: data.services ? data.services.join(", ") : "", // Convert array to string
-        theme: data.theme || "",
-        "additional-demand": data.additionalRequests || "", // Match Appwrite field name
-      };
+const onSubmit = async (data) => {
+  try {
+    // Format data for backend
+    const formattedData = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      eventType: data.eventType,
+      eventDate: data.eventDate,
+      eventLocation: data.eventLocation,
+      services: data.services || [],
+      theme: data.theme || "",
+      additionalRequests: data.additionalRequests || "",
+    };
 
-      const response = await databases.createDocument(
-        import.meta.env.VITE_APPWRITE_DATABASE_ID,
-        import.meta.env.VITE_APPWRITE_COLLECTION_ID,
-        ID.unique(),
-        formattedData
-      );
+    const response = await fetch("http://localhost:4000/booking", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formattedData),
+    });
 
-      console.log("Document created:", response);
-
-      // Show success message
-      setShowMessage(true);
-      setButtonConfirmed(true);
-      setTimeout(() => {
-        setShowMessage(false);
-        setButtonConfirmed(false);
-      }, 3000);
-    } catch (error) {
-      console.error("Error creating document:", error);
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Failed to submit booking");
     }
-  };
+
+    const result = await response.json();
+    console.log("Booking submitted:", result);
+
+    // Show success message and update button
+    setShowMessage(true);
+    setButtonConfirmed(true);
+    setTimeout(() => {
+      setShowMessage(false);
+      setButtonConfirmed(false);
+    }, 3000);
+  } catch (error) {
+    console.error("Error submitting booking:", error);
+    // Optionally add error display UI here
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex justify-center items-center p-6 relative mt-14">

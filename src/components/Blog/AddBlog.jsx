@@ -1,9 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Client, ID } from "appwrite";
 import RTE from "../RTE/RTE"; // Import the Tiptap-based RTE
-import { databases, storage } from "../../appwrite/appwrite"; // Import Appwrite Storage
 
 function AddBlog() {
   const navigate = useNavigate();
@@ -23,9 +21,10 @@ function AddBlog() {
   } = useForm();
 
   const handleLogout = () => {
-    localStorage.removeItem("isAdminAuthenticated");
-    navigate("/admin-login");
-  };
+    sessionStorage.removeItem("isAdminAuthenticated");
+  navigate("/blog");
+};
+
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -33,40 +32,23 @@ function AddBlog() {
     setErrorMessage("");
 
     try {
-      let uploadedImageUrl = "";
+      const formData = new FormData();
+      formData.append("title", data.title);
+      formData.append("message", data.content); // if using RTE like TipTap
+      formData.append("image", data.image[0]); // image is a File object
 
-      if (data.image && data.image[0]) {
-        const file = data.image[0];
+      const response = await fetch("http://localhost:4000/addblog", {
+        method: "POST",
+        body: formData,
+      });
 
-        // Upload Image to Appwrite Storage
-        const uploadedFile = await storage.createFile(
-          import.meta.env.VITE_APPWRITE_BUCKET_ID_BLOG,
-          ID.unique(),
-          file
-        );
+      const result = await response.json();
 
-        // Get Image URL
-        uploadedImageUrl = storage.getFilePreview(
-          import.meta.env.VITE_APPWRITE_BUCKET_ID_BLOG,
-          uploadedFile.$id
-        );
-      } else {
-        throw new Error("Please upload an image.");
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to add blog.");
       }
 
-      // Save blog post
-      await databases.createDocument(
-        import.meta.env.VITE_APPWRITE_DATABASE_ID,
-        import.meta.env.VITE_APPWRITE_COLLECTION_ID_BLOG,
-        ID.unique(),
-        {
-          title: data.title,
-          content: data.content, // Captures Tiptap RTE content
-          featuredImage: uploadedImageUrl,
-        }
-      );
-
-      console.log("Blog added successfully!");
+      console.log("Blog added successfully!", result);
 
       setButtonText("Blog added successfully!");
       setButtonColor("bg-green-500 hover:bg-green-600");
@@ -74,6 +56,7 @@ function AddBlog() {
       setTimeout(() => {
         setButtonText("Submit");
         setButtonColor("bg-blue-500 hover:bg-blue-600");
+        navigate("/blog"); // navigate to another page if needed
       }, 2000);
     } catch (error) {
       console.error("Error while adding blog:", error);

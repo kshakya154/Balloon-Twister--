@@ -30,7 +30,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
             content: defaultValue,
             editorProps: {
               attributes: {
-                class:
+                className:
                   "prose bg-gray-700 text-white p-4 rounded-lg min-h-[300px] focus:ring-2 focus:ring-blue-500",
               },
             },
