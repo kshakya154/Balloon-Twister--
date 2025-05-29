@@ -27,7 +27,7 @@ function Blog() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-900">
         <div className="flex space-x-2">
-          <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></div>
           <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce delay-150"></div>
           <div className="w-4 h-4 bg-red-500 rounded-full animate-bounce delay-300"></div>
         </div>
@@ -83,7 +83,7 @@ function Blog() {
               {/* Read More Button */}
               <div className="mt-4">
                 <Link to={`/blog/${blog._id}`}>
-                  <button className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded transition duration-200">
+                  <button className="bg-orange-600 hover:bg-orange-500 text-white px-4 py-2 rounded transition duration-200">
                     Read More
                   </button>
                 </Link>
@@ -96,7 +96,7 @@ function Blog() {
       {/* Sticky Admin Button */}
       <div className="fixed bottom-5 right-5">
         <Link to="/adminlogin">
-          <button className="bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-blue-600 transition">
+          <button className="bg-orange-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
             Admin
           </button>
         </Link>

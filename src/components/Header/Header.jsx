@@ -8,7 +8,7 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
-  const navItems = ["Home", "About", "Services", "Contact", "Blog","Gallery"];
+  const navItems = ["Home", "About", "Services", "Contact", "Blog","Gallery","Dolly"];
 
   return (
     <nav className=" bg-gray-900 fixed w-full z-30 top-0 start-0 text-white ">
@@ -65,8 +65,8 @@ function Header() {
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-700 font-bold"
-                      : "text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                      ? "text-orange-700 font-bold"
+                      : "text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
                   }
                 >
                   {nav}
@@ -79,7 +79,7 @@ function Header() {
         {/* Book Now Button (Always Visible & Right-Aligned) */}
         <button
           to="/booking"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ml-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ml-auto dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
         >
           <Link to="/booking">Book Now</Link>
         </button>

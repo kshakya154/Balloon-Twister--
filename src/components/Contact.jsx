@@ -82,7 +82,7 @@ const onSubmit = async (data) => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Contact Info Section */}
         <div>
-          <h1 className="text-3xl font-bold text-cyan-400">Let's Connect</h1>
+          <h1 className="text-3xl font-bold text-orange-400">Let's Connect</h1>
           <p className="mt-4 text-lg">
             Planning a party or special event? Let’s bring your balloon vision
             to life!. Reach out today — we’d love to decorate your celebration
@@ -103,7 +103,7 @@ const onSubmit = async (data) => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex space-x-5 mt-6 text-2xl text-cyan-400">
+          <div className="flex space-x-5 mt-6 text-2xl text-orange-400">
             <a href="mailto:kshakya154@gmail.com">
               <FaEnvelope />
             </a>
@@ -198,7 +198,7 @@ const onSubmit = async (data) => {
                       type="radio"
                       checked={selectedSubject === subject}
                       onChange={() => handleSubjectChange(subject)}
-                      className="form-radio text-cyan-500"
+                      className="form-radio text-orange-500"
                     />
                     {subject}
                   </label>
@@ -227,7 +227,7 @@ const onSubmit = async (data) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`w-full py-2 rounded font-semibold transition ${
-                isSubmitting ? "bg-green-600" : "bg-cyan-600 hover:bg-cyan-700"
+                isSubmitting ? "bg-green-600" : "bg-orange-600 hover:bg-orange-700"
               }`}
             >
               {isSubmitting ? "Message Sent" : "Send Message"}

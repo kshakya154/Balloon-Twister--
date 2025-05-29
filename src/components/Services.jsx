@@ -17,7 +17,7 @@ function Services() {
               <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
                 <div>
                   <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-700">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-700">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -45,7 +45,7 @@ function Services() {
                     </p>
                     <div className="mt-6">
                       <Link
-                        className="inline-flex rounded-lg bg-blue-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm  hover:bg-blue-800 "
+                        className="inline-flex rounded-lg bg-orange-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm  hover:bg-orange-800 "
                         to="/booking"
                       >
                         Book Now
@@ -60,7 +60,7 @@ function Services() {
                     loading="lazy"
                     width="647"
                     height="486"
-                    className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none transition-transform duration-300 hover:scale-105"
                     style={{ color: "transparent" }}
                     src="https://media.istockphoto.com/id/1352398824/photo/birthday-cake-on-a-background-balloons-party-decor-copy-space-trendy-cake-delicious-wedding.jpg?s=612x612&w=0&k=20&c=T4wlEs_JmC2XOMsCBSzTCBmp7bKRHbCkwjs4RlZpPjU="
                   />
@@ -74,7 +74,7 @@ function Services() {
               <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
                 <div>
                   <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-700">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-700">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -104,7 +104,7 @@ function Services() {
                     </p>
                     <div className="mt-6">
                       <Link
-                        className="inline-flex rounded-lg bg-blue-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm  hover:bg-blue-800 "
+                        className="inline-flex rounded-lg bg-orange-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm  hover:bg-orange-800  "
                         to="/booking"
                       >
                         Book Now
@@ -119,7 +119,7 @@ function Services() {
                     loading="lazy"
                     width="647"
                     height="486"
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none transition-transform duration-300 hover:scale-105"
                     style={{ color: "transparent" }}
                     src="https://media.istockphoto.com/id/479977238/photo/table-setting-for-an-event-party-or-wedding-reception.jpg?s=612x612&w=0&k=20&c=yIKLzW7wMydqmuItTTtUGS5cYTmrRGy0rXk81AltdTA="
                   />
@@ -133,7 +133,7 @@ function Services() {
               <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
                 <div>
                   <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-700">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-700">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -162,7 +162,7 @@ function Services() {
                     </p>
                     <div className="mt-6">
                       <Link
-                        className="inline-flex rounded-lg bg-blue-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm   hover:bg-blue-800 "
+                        className="inline-flex rounded-lg bg-orange-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm   hover:bg-orange-800 "
                         to="/booking"
                       >
                         Book Now
@@ -177,9 +177,9 @@ function Services() {
                     loading="lazy"
                     width="647"
                     height="486"
-                    className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none transition-transform duration-300 hover:scale-105"
                     style={{ color: "transparent" }}
-                    src="https://media.istockphoto.com/id/477736097/photo/inner-light.jpg?s=612x612&w=0&k=20&c=EwOPjXSkdl2bz1SpB3VhNcgDHJ51lvzQtWnjmvreTME="
+                    src="/images/img4.jpg"
                   />
                 </div>
               </div>

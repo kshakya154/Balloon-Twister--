@@ -46,10 +46,10 @@ const services = [
     link: "/services/custom-balloon-bouquets",
   },
   {
-    title: "Balloon Sculptures & Art Installations",
-    description: "Bigger, bolder, balloon creations.",
+    title: "Dolly Car Booking",
+    description: "Bigger, bolder, balloon creations, Bolder wedding",
     image: "/images/v21.jpg",
-    link: "/services/balloon-sculptures-art-installation",
+    link: "/services/dolly-car-booking",
   },
 ];
 

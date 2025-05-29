@@ -64,7 +64,7 @@ export default function Slider() {
           >
             {/* Tagline 1 - From Left with Glow */}
             <motion.h1
-              className="text-3xl md:text-6xl font-bold text-blue-400 mb-4 glow"
+              className="text-3xl md:text-6xl font-bold text-orange-400 mb-4 glow"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -100,7 +100,7 @@ export default function Slider() {
             >
               <Link
                 to="/booking"
-                className="bg-blue-700 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-white hover:text-black transition"
+                className="bg-orange-700 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-white hover:text-black transition"
               >
                 Inquire Now
               </Link>

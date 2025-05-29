@@ -154,7 +154,7 @@ const onSubmit = async (data) => {
                   type="checkbox"
                   {...register("services")}
                   value={service}
-                  className="w-5 h-5 text-blue-600"
+                  className="w-5 h-5 text-orange-600"
                 />
                 {service}
               </label>
@@ -184,7 +184,7 @@ const onSubmit = async (data) => {
           <button
             type="submit"
             className={`w-full p-3 rounded text-lg font-semibold ${
-              buttonConfirmed ? "bg-green-600" : "bg-blue-600 hover:bg-blue-700"
+              buttonConfirmed ? "bg-green-600" : "bg-orange-600 hover:bg-orange-700"
             }`}
           >
             {buttonConfirmed ? "Booking Confirmed" : "Confirm Booking"}

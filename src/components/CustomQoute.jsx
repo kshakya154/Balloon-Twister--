@@ -6,23 +6,23 @@ import { Link } from 'react-router';
 const steps = [
   {
     title: "Fill Out Inquiry Form",
-    icon: <FaClipboardList size={40} className="text-blue-600" />,
+    icon: <FaClipboardList size={40} className="text-orange-600" />,
     description:
       "Click below to fill out our inquiry form and we will get back to you within 48 hours.",
   },
   {
     title: "Discuss Your Vision",
-    icon: <GiBalloons size={40} className="text-blue-600" />, // Replaced FaBalloons
+    icon: <GiBalloons size={40} className="text-orange-600" />, // Replaced FaBalloons
     description: "We’ll discuss your event and pricing in further detail.",
   },
   {
     title: "Let’s Get You On The Calendar",
-    icon: <FaCalendarAlt size={40} className="text-blue-600" />,
+    icon: <FaCalendarAlt size={40} className="text-orange-600" />,
     description: "We require a 40% deposit to book your date on our calendar.",
   },
   {
     title: "Event Day! Time to Party!",
-    icon: <FaBirthdayCake size={40} className="text-blue-600" />, // Alternative to FaPartyHorn
+    icon: <FaBirthdayCake size={40} className="text-orange-600" />, // Alternative to FaPartyHorn
     description:
       "We arrive and install everything on your big day! You don’t have to worry about a thing.",
   },
@@ -49,17 +49,17 @@ export default function CustomQoute() {
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4">{step.icon}</div>
-              <h4 className="font-semibold text-blue-500 uppercase text-sm mb-2">
+              <div className="mb-4 transform hover:scale-120 transition duration-200">{step.icon}</div>
+              <h4 className="font-semibold text-orange-500 uppercase text-xl mb-2">
                 {step.title}
               </h4>
-              <p className="text-white text-sm">{step.description}</p>
+              <p className="text-white text-lg">{step.description}</p>
             </motion.div>
           ))}
         </div>
           <br />
           <br />
-        <Link to="/contact" className="mt-10 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition ">
+        <Link to="/contact" className="mt-10 bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition ">
           Inquire Now
         </Link>
       </div>

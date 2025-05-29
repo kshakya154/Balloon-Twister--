@@ -31,29 +31,27 @@ const serviceData = {
     title: " Weddings & Engagements",
     description:
       "Enhance the romance and elegance of your big day with luxurious balloon designs curated for weddings and engagements. Our custom decor includes heart-shaped arches, oversized initials, chic balloon bouquets, and romantic backdrops that blend seamlessly with floral arrangements and lighting. We work closely with couples and planners to create a dreamy ambiance that reflects your love story.We believe your love story deserves to be beautifully expressed. That’s why we go beyond simple decor, crafting balloon designs that complement your wedding aesthetic — whether it’s modern, rustic, romantic, or classic. Paired with lighting or floral arrangements, our balloon installations add a dreamy, Pinterest-worthy atmosphere to your big day.",
-    images: ["/images/img4.jpg", "/images/img3.jpg", "/images/img2.jpg"],
+    images: ["/images/v10.jpg", "/images/v22.jpg", "/images/v26.jpg"],
   },
   "school-events": {
     title: "School & Community Events",
     description:
       "Liven up school fairs, annual days, festivals, and community events with our engaging balloon twisting entertainment. We bring energy, fun, and interactivity to the crowd with live balloon art, games, and colorful decor tailored to the event’s theme. Ideal for family-friendly events, our presence adds visual appeal and keeps kids happily occupied throughout the day.We know how important it is to make public events feel inviting and exciting. Our balloon artists are great with children and experienced in managing high-energy environments. We also offer themed packages — from patriotic holidays to school mascots — to match the event purpose and foster a sense of community pride and fun.",
-    images: ["/images/img4.jpg", "/images/img3.jpg", "/images/img2.jpg"],
+    images: ["/images/v27.jpg", "/images/v5.jpg", "/images/img11.jpeg"],
   },
   "custom-balloon-bouquets": {
     title: "Custom Balloon Bouquets",
     description:
       "Surprise your loved ones with customized balloon bouquets delivered with care. Perfect for birthdays, anniversaries, graduations, or celebrations of any kind, our balloon bouquets can be personalized with names, messages, and favorite colors. Add-ons like flowers, chocolates, or plush toys can be included for an extra special touch. It’s a unique and joyful way to say “I’m thinking of you.We go beyond generic gifts by offering thoughtful customization. You can include special messages, name initials, or favorite cartoon characters to make each bouquet meaningful. Delivered with care and precision, our bouquets are perfect for surprising loved ones at home, work, or school — making everyday moments feel like celebrations.",
-    images: ["/images/img4.jpg", "/images/img3.jpg", "/images/img2.jpg"],
+    images: ["/images/img11.jpeg", "/images/img10.jpeg", "/images/img9.jpeg"],
   },
-  "balloon-sculptures-art-installation": {
-    title: "Balloon Sculptures & Art Installations",
+  "dolly-car-booking": {
+    title: "Dolly Car Booking",
     description:
-      "Make your event unforgettable with our custom large-scale balloon sculptures and immersive installations. From giant cartoon characters to balloon tunnels and branded mascots, we bring your imagination to life with vibrant color and impressive scale. Ideal for festivals, exhibitions, mall decor, or promotional campaigns — these artistic creations are guaranteed photo magnets.These installations are perfect for anyone who wants to wow their guests and dominate their social media feeds. We use high-quality balloons and precise techniques to build jaw-dropping, durable sculptures. Ideal for malls, storefronts, festivals, or even luxury parties — they aren’t just decorations; they’re attractions.",
-    images: ["/images/img4.jpg", "/images/img3.jpg", "/images/img2.jpg"],
+      "This service is ideal for a bride or groom's grand entry, surprise birthday gifts, baby homecomings, or even promotional events. We offer compact or SUV-sized dollies based on your requirement, and our team ensures on-site decoration, timely setup, and hassle-free pickup. Every element used is of premium quality, ensuring your decoration looks perfect and lasts throughout the event.With our attention to detail and creative flair, your dolly will become the highlight of the occasion, drawing admiration and countless photo ops. One of our happy clients shared, The car dolly decoration was the highlight of my sister’s wedding entry. Everyone was clicking pictures and asking who did the décor. Thank you, Balloon Twister, for the magic!",
+    images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
   },
 };
-
-
 
 const ServiceDetails = () => {
   const { service } = useParams();
@@ -61,7 +59,10 @@ const ServiceDetails = () => {
 
   const [selectedImage, setSelectedImage] = useState(data?.images?.[0]);
 
-  if (!data) return <div className="text-center text-white mt-10">Service not found</div>;
+  if (!data)
+    return (
+      <div className="text-center text-white mt-10">Service not found</div>
+    );
 
   return (
     <motion.div
@@ -91,8 +92,10 @@ const ServiceDetails = () => {
                 alt={`Thumbnail ${index + 1}`}
                 onClick={() => setSelectedImage(img)}
                 className={`w-20 h-20 object-cover rounded-md cursor-pointer border-2 ${
-                  img === selectedImage ? "border-blue-500" : "border-transparent"
-                } hover:border-blue-400 transition`}
+                  img === selectedImage
+                    ? "border-orange-500"
+                    : "border-transparent"
+                } hover:border-orange-400 transition`}
               />
             ))}
           </div>
@@ -102,10 +105,11 @@ const ServiceDetails = () => {
         <div className="flex flex-col justify-center gap-6">
           <h1 className="text-4xl font-bold">{data.title}</h1>
           <p className="text-lg leading-relaxed">{data.description}</p>
-          <Link to="/booking">
-            <Link to="/booking" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300">
-              Book Now
-            </Link>
+          <Link
+            to={service === "dolly-car-booking" ? "/dolly" : "/booking"}
+            className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300 w-32"
+          >
+            Book Now
           </Link>
         </div>
       </div>

@@ -18,7 +18,8 @@ import AddBlog from "./components/Blog/AddBlog";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Gallery from "./components/Gallery";
 import SingleBlog from "./components/Blog/SingleBlog";
-// import ServiceCard from "./components/ServiceCard"; 
+// import ServiceCard from "./components/ServiceCard";
+import DollyPage from "./components/DollyPage"; 
 
 import ServicesPage from "../pages/ServicePage";
 import ServiceDetails from "../pages/ServiceDetails";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/services/:service" element={<ServiceDetails />} />
         <Route path="/booking" element={<div>Booking Page</div>} />
         <Route path="/blog/:id" element={<SingleBlog />} />
+        <Route path="/dolly" element={<DollyPage/>} />
         {/* <Route path="/services" element={<ServicesPage />} /> */}
 
         
