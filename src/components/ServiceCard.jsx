@@ -11,13 +11,13 @@ export default function ServiceCard({ title, description, image, link }) {
         <div className="flex justify-center gap-4">
           <Link
             to="/booking"
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-base hover:bg-white hover:text-black transition"
+            className="bg-orange-600 text-white px-4 py-2 rounded-lg text-base hover:bg-white hover:text-black transition"
           >
             Book Now
           </Link>
           <Link
             to={link}
-            className=" text-base  px-4 py-2 rounded-lg hover:bg-blue-800 text-black  transition hover:text-white bg-white "
+            className=" text-base  px-4 py-2 rounded-lg hover:bg-orange-800 text-black  transition hover:text-white bg-white "
           >
             Read More
           </Link>

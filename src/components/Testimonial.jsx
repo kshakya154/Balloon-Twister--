@@ -29,7 +29,7 @@ function Testimonial() {
       name: "Ishaan Kapoor",
       text: "From the first call to the final balloon, everything was smooth and stress-free. My son’s birthday was a hit. Thank you for bringing the wow factor!",
       image:
-        "https://unsplash.com/photos/man-wearing-black-framed-sunglasses-mjRwhvqEC0U?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.0.3",
+        "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
     },
   ];
 
