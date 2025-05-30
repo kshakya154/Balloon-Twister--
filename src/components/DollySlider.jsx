@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/images/h1.jpg',
-  '/images/h2.jpg',
-  '/images/h3.jpg',
-  '/images/h4.jpg',
+  // '/images/dolly1.jpg',
+  '/images/dolly2.jpg',
+  '/images/dolly3.jpg',
+  '/images/dolly4.jpg',
 ];
 
 const DollySlider = () => {
@@ -18,9 +18,9 @@ const DollySlider = () => {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden relative">
+    <div className="w-screen h-screen overflow-hidden relative">
       <div
-        className="flex transition-transform duration-700 ease-in-out"
+        className="flex transition-transform duration-700 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((src, idx) => (
@@ -28,7 +28,7 @@ const DollySlider = () => {
             key={idx}
             src={src}
             alt={`slide-${idx}`}
-            className="w-full flex-shrink-0 object-cover h-[500px]"
+            className="w-screen h-screen flex-shrink-0 object-cover"
           />
         ))}
       </div>

@@ -100,7 +100,7 @@ export default function Slider() {
             >
               <Link
                 to="/booking"
-                className="bg-orange-700 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-white hover:text-black transition"
+                className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-white hover:text-black transition"
               >
                 Inquire Now
               </Link>

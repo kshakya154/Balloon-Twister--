@@ -8,7 +8,15 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
-  const navItems = ["Home", "About", "Services", "Contact", "Blog","Gallery","Dolly"];
+  const navItems = [
+    "Home",
+    "About",
+    "Services",
+    "Contact",
+    "Blog",
+    "Gallery",
+    "Dolly",
+  ];
 
   return (
     <nav className=" bg-gray-900 fixed w-full z-30 top-0 start-0 text-white ">
@@ -18,11 +26,7 @@ function Header() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src="/images/logo.png"
-            className="h-8"
-            alt="Logo"
-          />
+          <img src="/images/logo.png" className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Balloon Twister
           </span>
@@ -65,8 +69,8 @@ function Header() {
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-orange-700 font-bold"
-                      : "text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                      ? "text-orange-500 font-bold"
+                      : "text-white block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0"
                   }
                 >
                   {nav}
@@ -79,7 +83,7 @@ function Header() {
         {/* Book Now Button (Always Visible & Right-Aligned) */}
         <button
           to="/booking"
-          className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ml-auto dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
+          className="text-white bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 ml-auto dark:bg-orange-400 dark:hover:bg-orange-600 dark:focus:ring-orange-700"
         >
           <Link to="/booking">Book Now</Link>
         </button>

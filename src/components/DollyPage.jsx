@@ -31,7 +31,7 @@ const DollyPage = () => {
       if (response.ok) {
         setSuccess(true);
         reset();
-        setTimeout(() => setSuccess(false), 3000); // Reset success after 3 seconds
+        setTimeout(() => setSuccess(false), 3000);
       } else {
         alert("Error: " + result.message || "Something went wrong");
         console.error("Submission error:", result);
@@ -45,28 +45,24 @@ const DollyPage = () => {
   };
 
   return (
-    <div className="overflow-x-hidden bg-[#0c162d] min-h-screen">
-      <div className="max-w-5xl mx-auto px-4 py-10 space-y-12">
-        {/* Heading */}
-        <motion.h1
-          className="text-4xl font-bold text-center text-orange-800 mt-12"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Dolly Car Booking
-        </motion.h1>
+    <div className="overflow-x-hidden bg-[#0c162d] min-h-screen mt-6">
+      {/* Slider with Heading Overlay */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative w-screen h-screen"
+      >
+        <DollySlider />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white bg-opacity-200 px-6 py-4 rounded-lg bg-black">
+            Dolly Car Booking
+          </h1>
+        </div>
+      </motion.div>
 
-        {/* Slider Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <DollySlider />
-        </motion.div>
-
-        {/* Content */}
+      <div className="max-w-5xl mx-auto  py-10 space-y-12">
+        {/* Description Section */}
         <motion.div
           className="text-white leading-relaxed space-y-4 text-lg"
           initial={{ opacity: 0, x: -40 }}
