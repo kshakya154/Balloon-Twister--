@@ -177,9 +177,9 @@ function Services() {
                     loading="lazy"
                     width="647"
                     height="486"
-                    className="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none transition-transform duration-300 hover:scale-105"
+                    className="w-full rounded-xl shadow-2xl  ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none transition-transform duration-300 hover:scale-105 pr-24"
                     style={{ color: "transparent" }}
-                    src="/images/img4.jpg"
+                    src="https://media.istockphoto.com/id/500483216/photo/balloons.jpg?s=612x612&w=0&k=20&c=-VCWfKQ7v7zhfh3VDWRSPqIyYl4sF6iEOYFYCuCkcgo="
                   />
                 </div>
               </div>

@@ -8,23 +8,23 @@ const steps = [
     title: "Fill Out Inquiry Form",
     icon: <FaClipboardList size={40} className="text-orange-600" />,
     description:
-      "Click below to fill out our inquiry form and we will get back to you within 48 hours.",
+      "Click below to fill out our inquiry form and we will get back to you.",
   },
   {
     title: "Discuss Your Vision",
     icon: <GiBalloons size={40} className="text-orange-600" />, // Replaced FaBalloons
-    description: "We’ll discuss your event and pricing in further detail.",
+    description: "We’ll discuss your event and pricing in further detail with you.",
   },
   {
-    title: "Let’s Get You On The Calendar",
+    title: "Mark The Calendar",
     icon: <FaCalendarAlt size={40} className="text-orange-600" />,
     description: "We require a 40% deposit to book your date on our calendar.",
   },
   {
-    title: "Event Day! Time to Party!",
+    title: "Event Day! ",
     icon: <FaBirthdayCake size={40} className="text-orange-600" />, // Alternative to FaPartyHorn
     description:
-      "We arrive and install everything on your big day! You don’t have to worry about a thing.",
+      "We arrive and install everything on your big day! not to worry",
   },
 ];
 
