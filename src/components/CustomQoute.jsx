@@ -1,42 +1,23 @@
-import { FaClipboardList, FaCalendarAlt, FaCloud, FaBirthdayCake } from 'react-icons/fa';
-import { GiPartyPopper,GiBalloons } from 'react-icons/gi'; // Party icon
+// CustomQoute.js
 import { motion } from "framer-motion";
 import React from "react";
-import { Link } from 'react-router';
-const steps = [
-  {
-    title: "Fill Out Inquiry Form",
-    icon: <FaClipboardList size={40} className="text-orange-600" />,
-    description:
-      "Click below to fill out our inquiry form and we will get back to you.",
-  },
-  {
-    title: "Discuss Your Vision",
-    icon: <GiBalloons size={40} className="text-orange-600" />, // Replaced FaBalloons
-    description: "We’ll discuss your event and pricing in further detail with you.",
-  },
-  {
-    title: "Mark The Calendar",
-    icon: <FaCalendarAlt size={40} className="text-orange-600" />,
-    description: "We require a 40% deposit to book your date on our calendar.",
-  },
-  {
-    title: "Event Day! ",
-    icon: <FaBirthdayCake size={40} className="text-orange-600" />, // Alternative to FaPartyHorn
-    description:
-      "We arrive and install everything on your big day! not to worry",
-  },
-];
+import { Link } from "react-router";
 
-export default function CustomQoute() {
+export default function CustomQoute({
+  heading = "Get A Custom Quote",
+  subheading = "Let's get this party started!",
+  steps = [],
+  buttonText = "Inquire Now",
+  buttonLink = "/contact",
+}) {
   return (
     <section className="bg-gray-900 py-16 px-4">
       <div className="max-w-6xl mx-auto bg-gray-800 rounded-3xl shadow-lg p-10 text-center">
         <h3 className="text-white font-semibold mb-2 text-sm uppercase tracking-wider">
-          Let's get this party started!
+          {subheading}
         </h3>
         <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-white">
-          Get A Custom Quote
+          {heading}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -57,10 +38,10 @@ export default function CustomQoute() {
             </motion.div>
           ))}
         </div>
-          <br />
-          <br />
-        <Link to="/contact" className="mt-10 bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition ">
-          Inquire Now
+
+        <br /><br />
+        <Link to={buttonLink} className="mt-10 bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition">
+          {buttonText}
         </Link>
       </div>
     </section>

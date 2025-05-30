@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import DollySlider from "./DollySlider";
+import CustomQoute from "./CustomQoute";
+import { FaClipboardList, FaCalendarAlt, FaBirthdayCake } from "react-icons/fa";
+import { GiPartyPopper, GiBalloons } from "react-icons/gi";
+import { FaCarSide, FaCrown, FaStar } from "react-icons/fa"; // Add at the top if not already imported
 
 const DollyPage = () => {
   const {
@@ -61,6 +65,78 @@ const DollyPage = () => {
         </div>
       </motion.div>
 
+      <CustomQoute
+        subheading="Make an Entrance They'll Never Forget"
+        heading="Dolly Car Booking Process"
+        buttonText="Book Your Dolly Now"
+        buttonLink="#form" 
+        steps={[
+          {
+            title: "Submit Your Booking Details",
+            icon: <FaClipboardList size={40} className="text-orange-600" />,
+            description:
+              "Fill out the reservation form with all your event details.",
+          },
+          {
+            title: "Personalized Consultation",
+            icon: <GiBalloons size={40} className="text-orange-600" />,
+            description:
+              "We’ll contact you to finalize the theme and car type.",
+          },
+          {
+            title: "Reserve Your Spot",
+            icon: <FaCalendarAlt size={40} className="text-orange-600" />,
+            description: "Pay a 40% deposit to confirm your booking.",
+          },
+          {
+            title: "Celebrate in Style!",
+            icon: <FaBirthdayCake size={40} className="text-orange-600" />,
+            description:
+              "Your dolly car will arrive decorated and ready to go!",
+          },
+        ]}
+      />
+      <div className="bg-gray-800 rounded-3xl shadow-lg text-white py-12 px-6 mt-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-orange-500">
+          Pricing & Dolly Car Options
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Basic Package */}
+          <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
+            <FaCarSide size={40} className="text-orange-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Classic Dolly</h3>
+            <p className="mb-4 text-gray-300">
+              Simple floral decoration, suitable for birthdays or school
+              functions.
+            </p>
+            <p className="text-2xl font-bold text-orange-400">₹2,999</p>
+          </div>
+
+          {/* Premium Package */}
+          <div className="bg-orange-700 p-6 rounded-xl text-center text-white shadow-2xl scale-105">
+            <FaCrown size={40} className="text-white mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Premium Dolly</h3>
+            <p className="mb-4 text-orange-100">
+              Themed setup, lights, music, and moderate floral decor. Perfect
+              for weddings.
+            </p>
+            <p className="text-2xl font-bold text-white">₹5,999</p>
+          </div>
+
+          {/* Luxury Package */}
+          <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
+            <FaStar size={40} className="text-orange-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Luxury Dolly</h3>
+            <p className="mb-4 text-gray-300">
+              Fully customized car, AC, deluxe props, drapes & photo-ready
+              decor.
+            </p>
+            <p className="text-2xl font-bold text-orange-400">₹9,999</p>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-5xl mx-auto  py-10 space-y-12">
         {/* Description Section */}
         <motion.div
@@ -99,7 +175,7 @@ const DollyPage = () => {
         </motion.div>
 
         {/* Contact Form */}
-        <motion.form
+        <motion.form id="form"
           onSubmit={handleSubmit(onSubmit)}
           className="bg-gray-800 shadow-md rounded-lg p-6 space-y-4"
           initial={{ opacity: 0, y: 40 }}
@@ -138,7 +214,15 @@ const DollyPage = () => {
               <option value="sedan">Sedan</option>
               <option value="hatchback">Hatchback</option>
             </select>
+
+            {/* New Date Field */}
+            <input
+              type="date"
+              {...register("date", { required: true })}
+              className="border p-2 rounded bg-gray-900"
+            />
           </div>
+
           <textarea
             placeholder="Additional Requests"
             {...register("additionalrequest")}
@@ -159,8 +243,8 @@ const DollyPage = () => {
             {loading
               ? "Submitting..."
               : success
-              ? "Dolly Booked Successfully!"
-              : "Submit"}
+              ? "Dolly Reserved Successfully!"
+              : "Reserve Your Dolly"}
           </button>
         </motion.form>
       </div>

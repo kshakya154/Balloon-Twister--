@@ -15,7 +15,7 @@ function Header() {
     "Contact",
     "Blog",
     "Gallery",
-    "Dolly",
+    "Dolly Car",
   ];
 
   return (
@@ -65,7 +65,13 @@ function Header() {
             {navItems.map((nav, index) => (
               <li key={index}>
                 <NavLink
-                  to={nav === "Home" ? "/" : `/${nav.toLowerCase()}`}
+                  to={
+                    nav === "Home"
+                      ? "/"
+                      : nav === "Dolly Car"
+                      ? "/dolly"
+                      : `/${nav.toLowerCase()}`
+                  }
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     isActive
