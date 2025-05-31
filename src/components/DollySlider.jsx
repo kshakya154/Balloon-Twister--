@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  // '/images/dolly1.jpg',
-  '/images/dolly2.jpg',
-  '/images/dolly3.jpg',
-  '/images/dolly4.jpg',
+  '/images/dolly1.png',
+  '/images/dolly2.png',
+  '/images/dolly3.png',
+  '/images/dolly4.png',
 ];
 
 const DollySlider = () => {

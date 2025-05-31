@@ -54,7 +54,7 @@ export default function Slider() {
       </div>
 
       {/* Foreground content */}
-      <div className="relative z-30 flex flex-col items-center justify-center text-center px-4 h-full">
+      <div className="relative z-1 flex flex-col items-center justify-center text-center px-4 h-full">
         <div className="container mx-auto flex px-5 py-12 items-center justify-center flex-col">
           <motion.div
             className="lg:w-2/3 w-full"

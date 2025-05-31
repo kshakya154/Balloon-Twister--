@@ -84,12 +84,12 @@ const DollyPage = () => {
               "We’ll contact you to finalize the theme and car type.",
           },
           {
-            title: "Reserve Your Spot",
+            title: "Reserve Your Spot! Aeap",
             icon: <FaCalendarAlt size={40} className="text-orange-600" />,
             description: "Pay a 40% deposit to confirm your booking.",
           },
           {
-            title: "Celebrate in Style!",
+            title: "Celebrate in Style! with us",
             icon: <FaBirthdayCake size={40} className="text-orange-600" />,
             description:
               "Your dolly car will arrive decorated and ready to go!",

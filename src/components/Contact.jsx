@@ -104,19 +104,19 @@ const onSubmit = async (data) => {
 
           {/* Social Icons */}
           <div className="flex space-x-5 mt-6 text-2xl text-orange-400">
-            <a href="mailto:kshakya154@gmail.com">
+            <a href="mailto:Info@balloontwister.com">
               <FaEnvelope />
             </a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+            <a href="https://instagram.com/ballontwister" target="_blank">
               <FaInstagram />
             </a>
-            <a href="https://github.com/yourprofile" target="_blank">
+            <a href="https://facebook.com/balloontwister" target="_blank">
               <FaFacebookF />
             </a>
-            <a href="https://wa.me/917973182512" target="_blank">
+            <a href="https://wa.me/919896578836" target="_blank">
               <FaWhatsapp />
             </a>
-            <a href="https://twitter.com/yourhandle" target="_blank">
+            <a href="https://twitter.com/balloontwister" target="_blank">
               <FaTwitter />
             </a>
           </div>
