@@ -3,9 +3,15 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import DollySlider from "./DollySlider";
 import CustomQoute from "./CustomQoute";
-import { FaClipboardList, FaCalendarAlt, FaBirthdayCake } from "react-icons/fa";
+import {
+  FaClipboardList,
+  FaCalendarAlt,
+  FaBirthdayCake,
+  FaCarSide,
+  FaCrown,
+  FaStar,
+} from "react-icons/fa";
 import { GiPartyPopper, GiBalloons } from "react-icons/gi";
-import { FaCarSide, FaCrown, FaStar } from "react-icons/fa"; // Add at the top if not already imported
 
 const DollyPage = () => {
   const {
@@ -58,9 +64,9 @@ const DollyPage = () => {
         className="relative w-screen h-screen"
       >
         <DollySlider />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white bg-opacity-200 px-6 py-4 rounded-lg bg-black">
-            Dolly Car Booking
+        <div className="absolute inset-0 flex items-center justify-center backdrop-blur-[1px] bg-black/40">
+          <h1 className="text-3xl md:text-5xl font-bold text-white text-center shadow-xl px-6 py-4 rounded-xl">
+            Arrive in Style on Your Big Day With - Dolly Wedding Cars.
           </h1>
         </div>
       </motion.div>
@@ -69,7 +75,7 @@ const DollyPage = () => {
         subheading="Make an Entrance They'll Never Forget"
         heading="Dolly Car Booking Process"
         buttonText="Book Your Dolly Now"
-        buttonLink="#form" 
+        buttonLink="#form"
         steps={[
           {
             title: "Submit Your Booking Details",
@@ -96,6 +102,8 @@ const DollyPage = () => {
           },
         ]}
       />
+
+      {/* Pricing Section */}
       <div className="bg-gray-800 rounded-3xl shadow-lg text-white py-12 px-6 mt-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-orange-500">
           Pricing & Dolly Car Options
@@ -137,10 +145,10 @@ const DollyPage = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto  py-10 space-y-12">
-        {/* Description Section */}
+      {/* Description + Form Section */}
+      <div className="max-w-5xl mx-auto py-10 space-y-12">
         <motion.div
-          className="text-white leading-relaxed space-y-4 text-lg"
+          className="text-white leading-relaxed space-y-4 text-base sm:text-lg px-4 sm:px-6 md:px-12 lg:px-20"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -169,13 +177,16 @@ const DollyPage = () => {
             flexible packages, easy booking options, and doorstep delivery, we
             take the stress out of planning and bring the joy straight to you.
             Let your loved ones shine and be the center of attention as they
-            ride in elegance. Book your dolly car with Balloon Bliss today and
-            make your celebration truly memorable!
+            ride in elegance.
+            <span className="block mt-4 font-semibold text-orange-400">
+              Book your dolly car with Balloon Bliss today and make your
+              celebration truly memorable!
+            </span>
           </p>
         </motion.div>
 
-        {/* Contact Form */}
-        <motion.form id="form"
+        <motion.form
+          id="form"
           onSubmit={handleSubmit(onSubmit)}
           className="bg-gray-800 shadow-md rounded-lg p-6 space-y-4"
           initial={{ opacity: 0, y: 40 }}
@@ -214,8 +225,6 @@ const DollyPage = () => {
               <option value="sedan">Sedan</option>
               <option value="hatchback">Hatchback</option>
             </select>
-
-            {/* New Date Field */}
             <input
               type="date"
               {...register("date", { required: true })}
