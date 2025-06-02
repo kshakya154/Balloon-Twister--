@@ -23,52 +23,60 @@ function Booking() {
     "Derabassi",
     "Pinjore",
     "Baddi",
+    "Lalru",
+    "Dappar",
+    "Barwala",
+    "Shahbad",
+    "Ambala",
+    "Saha-Ambala",
+    "Mullana",
+    "Patiala",
+    "Rajpura",
   ];
 
-const onSubmit = async (data) => {
-  try {
-    // Format data for backend
-    const formattedData = {
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
-      eventType: data.eventType,
-      eventDate: data.eventDate,
-      eventLocation: data.eventLocation,
-      services: data.services || [],
-      theme: data.theme || "",
-      additionalRequests: data.additionalRequests || "",
-    };
+  const onSubmit = async (data) => {
+    try {
+      // Format data for backend
+      const formattedData = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        eventType: data.eventType,
+        eventDate: data.eventDate,
+        eventLocation: data.eventLocation,
+        services: data.services || [],
+        theme: data.theme || "",
+        additionalRequests: data.additionalRequests || "",
+      };
 
-    const response = await fetch("http://localhost:4000/booking", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formattedData),
-    });
+      const response = await fetch("http://localhost:4000/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formattedData),
+      });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Failed to submit booking");
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to submit booking");
+      }
+
+      const result = await response.json();
+      console.log("Booking submitted:", result);
+
+      // Show success message and update button
+      setShowMessage(true);
+      setButtonConfirmed(true);
+      setTimeout(() => {
+        setShowMessage(false);
+        setButtonConfirmed(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting booking:", error);
+      // Optionally add error display UI here
     }
-
-    const result = await response.json();
-    console.log("Booking submitted:", result);
-
-    // Show success message and update button
-    setShowMessage(true);
-    setButtonConfirmed(true);
-    setTimeout(() => {
-      setShowMessage(false);
-      setButtonConfirmed(false);
-    }, 3000);
-  } catch (error) {
-    console.error("Error submitting booking:", error);
-    // Optionally add error display UI here
-  }
-};
-
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex justify-center items-center p-6 relative mt-14">
@@ -184,7 +192,9 @@ const onSubmit = async (data) => {
           <button
             type="submit"
             className={`w-full p-3 rounded text-lg font-semibold ${
-              buttonConfirmed ? "bg-green-600" : "bg-orange-600 hover:bg-orange-700"
+              buttonConfirmed
+                ? "bg-green-600"
+                : "bg-orange-600 hover:bg-orange-700"
             }`}
           >
             {buttonConfirmed ? "Booking Confirmed" : "Confirm Booking"}

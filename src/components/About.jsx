@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react"
+import React from "react";
 import { Link } from "react-router";
 const About = () => {
   return (
@@ -20,7 +20,8 @@ const About = () => {
           About Balloon Twister
         </motion.h1>
         <p className="text-lg text-white">
-          We transform your moments into magical celebrations with custom balloon decorations for every occasion.
+          We transform your moments into magical celebrations with custom
+          balloon decorations for every occasion.
         </p>
         <img
           src="images/img10.jpeg"
@@ -36,7 +37,8 @@ const About = () => {
             🎯 Our Mission
           </motion.h2>
           <p className="text-white text-lg">
-            To spread joy through colorful and creative balloon art, making every event visually unforgettable.
+            To spread joy through colorful and creative balloon art, making
+            every event visually unforgettable.
           </p>
         </div>
         <img
@@ -95,7 +97,8 @@ const About = () => {
           👥 Meet the Team
         </motion.h2>
         <p className="text-white text-lg mb-6">
-          Our team of artists, planners, and balloon stylists bring joy and color to every celebration.
+          Our team of artists, planners, and balloon stylists bring joy and
+          color to every celebration.
         </p>
         <img
           src="images/h9.jpg"
@@ -107,15 +110,27 @@ const About = () => {
       {/* Testimonials */}
       <section className="bg-gray-800 py-12 mb-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-orange-600 mb-6">🗨️ What Our Clients Say</h2>
+          <h2 className="text-2xl font-semibold text-orange-600 mb-6">
+            🗨️ What Our Clients Say
+          </h2>
           <div className="space-y-6">
             <blockquote className="bg-gray-700 shadow p-6 rounded-xl">
-              <p className="italic">“They made my daughter's birthday magical! The balloon arch was stunning.”</p>
-              <span className="block mt-2 font-semibold text-orange-600">— Priya R.</span>
+              <p className="italic">
+                “They made my daughter's birthday magical! The balloon arch was
+                stunning.”
+              </p>
+              <span className="block mt-2 font-semibold text-orange-600">
+                — Priya R.
+              </span>
             </blockquote>
             <blockquote className="bg-gray-700 shadow p-6 rounded-xl">
-              <p className="italic">“Professional, creative, and super easy to work with. Highly recommended!”</p>
-              <span className="block mt-2 font-semibold text-orange-600">— Rahul M.</span>
+              <p className="italic">
+                “Professional, creative, and super easy to work with. Highly
+                recommended!”
+              </p>
+              <span className="block mt-2 font-semibold text-orange-600">
+                — Rahul M.
+              </span>
             </blockquote>
           </div>
         </div>
@@ -123,25 +138,36 @@ const About = () => {
 
       {/* Fun Facts / Achievements */}
       <section className="max-w-6xl mx-auto mb-20">
-        <h2 className="text-2xl font-semibold text-orange-600 mb-6 text-center">🎉 Fun Facts</h2>
+        <h2 className="text-2xl font-semibold text-orange-600 mb-6 text-center">
+          🎉 Fun Facts
+        </h2>
         <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6 text-center text-lg font-semibold text-orange-600">
-          <div className="bg-gray-800 rounded-xl p-6">500+ Events Decorated</div>
+          <div className="bg-gray-800 rounded-xl p-6">
+            500+ Events Decorated
+          </div>
           <div className="bg-gray-800 rounded-xl p-6">5 Years in Business</div>
           <div className="bg-gray-800 rounded-xl p-6">20+ Cities Served</div>
-          <div className="bg-gray-800 rounded-xl p-6">100% Client Satisfaction</div>
+          <div className="bg-gray-800 rounded-xl p-6">
+            100% Client Satisfaction
+          </div>
         </div>
       </section>
 
       {/* Gallery Preview */}
       <section className="max-w-6xl mx-auto mb-20">
-        <h2 className="text-2xl font-semibold text-orange-600 mb-6">🖼️ Gallery Sneak Peek</h2>
-        <div className="grid md:grid-cols-3 gap-4">   
-            <img src="/images/img10.jpeg"/>
-            <img src="/images/img4.jpg"/>
-            <img src="/images/img3.jpg"/>
+        <h2 className="text-2xl font-semibold text-orange-600 mb-6">
+          🖼️ Gallery Sneak Peek
+        </h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <img src="/images/img10.jpeg" />
+          <img src="/images/img4.jpg" />
+          <img src="/images/img3.jpg" />
         </div>
         <div className="text-center mt-6">
-          <Link to="/gallery" className="text-orange-600 underline hover:text-orange-500">
+          <Link
+            to="/gallery"
+            className="text-orange-600 underline hover:text-orange-500"
+          >
             View Full Gallery →
           </Link>
         </div>
@@ -150,12 +176,15 @@ const About = () => {
       {/* Service Areas */}
       <section className="bg-gray-800 py-12 mb-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-orange-600 mb-4">📍 We Serve</h2>
+          <h2 className="text-2xl font-semibold text-orange-600 mb-4">
+            📍 We Serve
+          </h2>
           <p className="text-white mb-4">
             We proudly serve in major cities across India including:
           </p>
           <p className="text-orange-600 font-semibold">
-            Delhi · Mumbai · Bangalore · Hyderabad · Chennai · Kolkata · Pune · Ahmedabad
+            Delhi · Mumbai · Bangalore · Hyderabad · Chennai · Kolkata · Pune ·
+            Ahmedabad
           </p>
         </div>
       </section>

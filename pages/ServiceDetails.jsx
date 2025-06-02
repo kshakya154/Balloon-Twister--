@@ -40,7 +40,7 @@ const serviceData = {
     images: ["/images/v27.jpg", "/images/v5.jpg", "/images/img11.jpeg"],
   },
   "custom-balloon-bouquets": {
-    title: "Custom Balloon Bouquets",
+    title: "Custom Gas Balloon Bouquets",
     description:
       "Surprise your loved ones with customized balloon bouquets delivered with care. Perfect for birthdays, anniversaries, graduations, or celebrations of any kind, our balloon bouquets can be personalized with names, messages, and favorite colors. Add-ons like flowers, chocolates, or plush toys can be included for an extra special touch. It’s a unique and joyful way to say “I’m thinking of you.We go beyond generic gifts by offering thoughtful customization. You can include special messages, name initials, or favorite cartoon characters to make each bouquet meaningful. Delivered with care and precision, our bouquets are perfect for surprising loved ones at home, work, or school — making everyday moments feel like celebrations.",
     images: ["/images/img11.jpeg", "/images/img10.jpeg", "/images/img9.jpeg"],

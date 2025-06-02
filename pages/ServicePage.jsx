@@ -40,7 +40,7 @@ const services = [
     link: "/services/school-events",
   },
   {
-    title: "Custom Balloon Bouquets",
+    title: "Custom Gas Balloon Bouquets",
     description: "Send love, one balloon at a time.",
     image: "/images/v26.jpg",
     link: "/services/custom-balloon-bouquets",
