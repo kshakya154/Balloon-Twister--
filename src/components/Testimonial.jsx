@@ -8,13 +8,13 @@ function Testimonial() {
   const testimonials = [
     {
       name: "Aarav Sharma",
-      role: "Event Planner",
+      role: "Engineer",
       text: "Absolutely stunning! The balloon decorations for my daughter's 5th birthday were beyond my expectations.",
       image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
     },
     {
       name: "Rohan Mehta",
-      role: "Interior Designer",
+      role: "Businessman",
       text: "The baby shower decor was a dream come true! Guests couldn’t stop taking pictures. Highly recommend!",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
     },
@@ -26,7 +26,7 @@ function Testimonial() {
     },
     {
       name: "Ishaan Kapoor",
-      role: "Party Host",
+      role: "Architect",
       text: "Everything was smooth and stress-free. My son’s birthday was a hit. Thank you for the wow factor!",
       image: "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
     },
