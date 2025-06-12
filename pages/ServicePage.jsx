@@ -51,6 +51,30 @@ const services = [
     image: "/images/v21.jpg",
     link: "/services/dolly-car-booking",
   },
+  {
+    title: "Surprise Balloons",
+    description: "Unwrap Joy, One Balloon at a Time!",
+    image: "/images/v21.jpg",
+    link: "/services/surprise-balloons",
+  },
+  {
+    title: "Valentines Day",
+    description: "Love is in the Air… and in Every Balloon!",
+    image: "/images/v21.jpg",
+    link: "/services/valentines-day",
+  },
+  {
+    title: "Surprise Room Decor",
+    description: "Step into a Room Full of Magic!",
+    image: "/images/v21.jpg",
+    link: "/services/surprise-room-decor",
+  },
+  {
+    title: "Aann Prashan",
+    description: "A Sacred Bite, Celebrated Bright!",
+    image: "/images/v21.jpg",
+    link: "/services/aann-prashan",
+  },
 ];
 
 export default function ServicesPage() {

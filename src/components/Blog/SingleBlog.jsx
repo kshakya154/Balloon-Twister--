@@ -10,7 +10,9 @@ function SingleBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/blog/${id}`);
+        const response = await fetch(
+          `https://backend-balloon-twister.onrender.com/blog/${id}`
+        );
         const result = await response.json();
         setBlog(result.data);
       } catch (error) {
@@ -48,7 +50,9 @@ function SingleBlog() {
     >
       <div className="flex flex-col">
         {/* Title for mobile */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 md:hidden">{blog.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 md:hidden">
+          {blog.title}
+        </h1>
 
         <div className="flex flex-col md:block">
           {/* Image */}
@@ -63,7 +67,9 @@ function SingleBlog() {
           )}
 
           {/* Title for desktop */}
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 hidden md:block">{blog.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 hidden md:block">
+            {blog.title}
+          </h1>
 
           {/* Content */}
           <div

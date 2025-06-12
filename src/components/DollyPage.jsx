@@ -28,13 +28,16 @@ const DollyPage = () => {
     setLoading(true);
     setSuccess(false);
     try {
-      const response = await fetch("http://localhost:4000/dolly", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://backend-balloon-twister.onrender.com/dolly",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
 

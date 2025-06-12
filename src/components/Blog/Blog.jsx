@@ -9,7 +9,9 @@ function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("http://localhost:4000/blog");
+        const response = await fetch(
+          "https://backend-balloon-twister.onrender.com/blog"
+        );
         const result = await response.json();
         setBlogs(result.data || []);
       } catch (error) {

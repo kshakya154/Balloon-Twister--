@@ -51,6 +51,30 @@ const serviceData = {
       "This service is ideal for a bride or groom's grand entry, surprise birthday gifts, baby homecomings, or even promotional events. We offer compact or SUV-sized dollies based on your requirement, and our team ensures on-site decoration, timely setup, and hassle-free pickup. Every element used is of premium quality, ensuring your decoration looks perfect and lasts throughout the event.With our attention to detail and creative flair, your dolly will become the highlight of the occasion, drawing admiration and countless photo ops. One of our happy clients shared, The car dolly decoration was the highlight of my sister’s wedding entry. Everyone was clicking pictures and asking who did the décor. Thank you, Balloon Twister, for the magic!",
     images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
   },
+  "surprise-balloons": {
+    title: "Surprise Balloon Decoration",
+    description:
+      "Make someone’s day unforgettable with our Surprise Balloon Decor service. Whether it’s a birthday wake-up, a romantic gesture, or a friend’s achievement, we specialize in creating stunning and joyful balloon arrangements that are set up secretly to maximize the surprise element. Our packages include customized messages, foil balloons, confetti balloons, and optional add-ons like gifts, flowers, or cakes — all arranged with creativity and care, ready to blow them away (literally!).",
+    images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
+  },
+  "valentines-day": {
+    title: "Valentines Day Special",
+    description:
+      "Turn your space into a romantic haven with our Valentine’s Day Special decoration service. Whether it’s your first Valentine’s or a milestone celebration, we design mood-setting experiences using heart-shaped balloons, LED lighting, rose petals, candles, photo garlands, and even personalized messages. Add-ons include gift boxes, cakes, or even a private canopy setup — perfect for proposals or date night surprises.",
+    images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
+  },
+  "aann-prashan": {
+    title: "Aann Prashan",
+    description:
+      "Annaprashan marks your baby's first solid food — a cherished milestone in Indian tradition. We add joy and festivity to this sacred event through traditional yet modern balloon decorations. From pastel arches to elegant backdrops and culturally-themed props like rice bowls and banana leaves, we design a setup that blends tradition with vibrant beauty. Optional custom name banners, photo booth frames, and floral touches can be added to make it truly picture-perfect.",
+    images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
+  },
+  "surprise-room-decor": {
+    title: "Surprise Room Decoration",
+    description:
+      "Give your loved ones a memory to cherish forever with our Surprise Room Decorations. Perfect for birthdays, anniversaries, proposals, or even small wins — we sneak into the location before the big reveal and transform the space with themed balloon decor, LED lights, hanging photos, message boards, ribbons, and more. Every detail is curated to match your vision and create an unforgettable surprise moment.",
+    images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
+  },
 };
 
 const ServiceDetails = () => {

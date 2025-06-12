@@ -49,7 +49,7 @@ function Booking() {
         additionalRequests: data.additionalRequests || "",
       };
 
-      const response = await fetch("http://localhost:4000/booking", {
+      const response = await fetch("https://backend-balloon-twister.onrender.com/booking", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
