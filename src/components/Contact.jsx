@@ -10,7 +10,7 @@ import {
   FaWhatsapp,
   FaTwitter,
   FaFacebookF,
-   FaInstagram
+  FaInstagram,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -26,51 +26,52 @@ export default function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const [backendError, setBackendError] = useState("");
+  const [backendError, setBackendError] = useState("");
 
-const onSubmit = async (data) => {
-  try {
-    setBackendError("");
-    setIsSubmitting(true);
+  const onSubmit = async (data) => {
+    try {
+      setBackendError("");
+      setIsSubmitting(true);
 
-    const response = await fetch("http://localhost:4000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+      const response = await fetch("http://localhost:4000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (!response.ok) {
-      throw new Error(result.message || "Something went wrong");
-    }
+      if (!response.ok) {
+        throw new Error(result.message || "Something went wrong");
+      }
 
-    setSuccessMessage(result.message || "Message sent successfully!");
-    setTimeout(() => {
+      setSuccessMessage(result.message || "Message sent successfully!");
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setSuccessMessage("");
+        reset();
+        setSelectedSubject("");
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      setBackendError(error.message);
       setIsSubmitting(false);
-      setSuccessMessage("");
-      reset();
-      setSelectedSubject("");
-    }, 3000);
-  } catch (error) {
-    console.error("Error submitting contact form:", error);
-    setBackendError(error.message);
-    setIsSubmitting(false);
+    }
+  };
+
+  {
+    backendError && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="bg-red-600 text-white p-3 rounded mb-4"
+      >
+        {backendError}
+      </motion.div>
+    );
   }
-};
-
-{backendError && (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    className="bg-red-600 text-white p-3 rounded mb-4"
-  >
-    {backendError}
-  </motion.div>
-)}
-
 
   const handleSubjectChange = (value) => {
     setSelectedSubject(value);
@@ -98,7 +99,7 @@ const onSubmit = async (data) => {
             </p>
             <p>
               <strong>Address:</strong> Housing Board Colony, Ambala Cantt ||
-              Sec 34 Chandigarh
+              2140 vikas nagar chandigarh
             </p>
           </div>
 
@@ -227,7 +228,9 @@ const onSubmit = async (data) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`w-full py-2 rounded font-semibold transition ${
-                isSubmitting ? "bg-green-600" : "bg-orange-600 hover:bg-orange-700"
+                isSubmitting
+                  ? "bg-green-600"
+                  : "bg-orange-600 hover:bg-orange-700"
               }`}
             >
               {isSubmitting ? "Message Sent" : "Send Message"}
