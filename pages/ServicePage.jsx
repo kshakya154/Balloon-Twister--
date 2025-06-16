@@ -52,10 +52,10 @@ const services = [
     link: "/services/dolly-car-booking",
   },
   {
-    title: "Surprise Balloons",
-    description: "Unwrap Joy, One Balloon at a Time!",
+    title: "Ring Decoration",
+    description: "Elegant Floral Setups!",
     image: "/images/v21.jpg",
-    link: "/services/surprise-balloons",
+    link: "/services/ring-decoration",
   },
   {
     title: "Valentines Day",

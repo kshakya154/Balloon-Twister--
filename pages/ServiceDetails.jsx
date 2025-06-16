@@ -51,10 +51,10 @@ const serviceData = {
       "This service is ideal for a bride or groom's grand entry, surprise birthday gifts, baby homecomings, or even promotional events. We offer compact or SUV-sized dollies based on your requirement, and our team ensures on-site decoration, timely setup, and hassle-free pickup. Every element used is of premium quality, ensuring your decoration looks perfect and lasts throughout the event.With our attention to detail and creative flair, your dolly will become the highlight of the occasion, drawing admiration and countless photo ops. One of our happy clients shared, The car dolly decoration was the highlight of my sister’s wedding entry. Everyone was clicking pictures and asking who did the décor. Thank you, Balloon Twister, for the magic!",
     images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
   },
-  "surprise-balloons": {
-    title: "Surprise Balloon Decoration",
+  "ring-decoration": {
+    title: " Ring Decoration",
     description:
-      "Make someone’s day unforgettable with our Surprise Balloon Decor service. Whether it’s a birthday wake-up, a romantic gesture, or a friend’s achievement, we specialize in creating stunning and joyful balloon arrangements that are set up secretly to maximize the surprise element. Our packages include customized messages, foil balloons, confetti balloons, and optional add-ons like gifts, flowers, or cakes — all arranged with creativity and care, ready to blow them away (literally!).",
+      "Your ring ceremony marks the beautiful beginning of a lifelong journey, and we are here to make that moment truly unforgettable with our exclusive Ring Ceremony Decoration services. At [Your Company Name], we believe that every couple has a unique story, and we express that story through stunning, personalized décor that reflects your personality and love. Whether you dream of a romantic floral setup, a luxurious royal theme, or a modern minimalist ambiance, our creative decorators work closely with you to bring your vision to life.We provide elegant stage decorations adorned with fresh flowers, shimmering lights, thematic props, and statement backdrops that serve as the perfect setting for exchanging rings and capturing precious memories. Our team ensures every corner of your venue is thoughtfully decorated — from welcome boards and entrance arches to seating arrangements and selfie zones.",
     images: ["/images/h4.jpg", "/images/h2.jpg", "/images/h1.jpg"],
   },
   "valentines-day": {
