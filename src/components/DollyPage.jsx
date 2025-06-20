@@ -226,7 +226,21 @@ const DollyPage = () => {
               <option value="">Select Car Type</option>
               <option value="suv">SUV</option>
               <option value="sedan">Sedan</option>
-              <option value="hatchback">Hatchback</option>
+              <option value="hatchback">Audi</option>
+              <option value="hatchback">BMW</option>
+              <option value="hatchback">Mercedes-Benz</option>
+              <option value="hatchback">Jaguar</option>
+              <option value="hatchback">Land Rover</option>
+              <option value="hatchback">Lexus</option>
+              <option value="hatchback">Volvo</option>
+              <option value="hatchback">Porsche</option>
+              <option value="hatchback">Ferrari</option>
+              <option value="hatchback">Bently</option>
+              <option value="hatchback">Rolls-Royce</option>
+              <option value="hatchback">Lamborghini</option>
+              <option value="hatchback">Aston Martin</option>
+              <option value="hatchback">Fortuner</option>
+              <option value="hatchback">Verna</option>
             </select>
             <input
               type="date"

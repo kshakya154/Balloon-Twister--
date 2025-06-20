@@ -96,13 +96,13 @@ function Blog() {
       </div>
 
       {/* Sticky Admin Button */}
-      <div className="fixed bottom-5 right-5">
+      {/* <div className="fixed bottom-5 right-5">
         <Link to="/adminlogin">
           <button className="bg-orange-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
             Admin
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
