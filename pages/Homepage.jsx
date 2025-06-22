@@ -8,8 +8,8 @@ import Slider from "../src/components/Slider";
 import CustomQoute from "../src/components/CustomQoute";
 
 // Icons
-import { FaClipboardList, FaCalendarAlt, FaBirthdayCake } from 'react-icons/fa';
-import { GiBalloons } from 'react-icons/gi';
+import { FaClipboardList, FaCalendarAlt, FaBirthdayCake } from "react-icons/fa";
+import { GiBalloons } from "react-icons/gi";
 
 function Homepage() {
   return (
@@ -20,10 +20,6 @@ function Homepage() {
         transition={{ duration: 0.5 }}
       >
         <Slider />
-        <Work />
-        <Services />
-        <Testimonial />
-        
         <CustomQoute
           subheading="Make an Entrance They'll Never Forget"
           heading="Fill out enquiry form"
@@ -33,26 +29,33 @@ function Homepage() {
             {
               title: "Fill Out Inquiry Form",
               icon: <FaClipboardList size={40} className="text-orange-600" />,
-              description: "Click below to fill out our inquiry form and we will get back to you",
+              description:
+                "Click below to fill out our inquiry form and we will get back to you",
             },
             {
               title: "Discuss Your Vision",
               icon: <GiBalloons size={40} className="text-orange-600" />,
-              description: "We’ll discuss your event and pricing in further detail with you",
+              description:
+                "We’ll discuss your event and pricing in further detail with you",
             },
             {
               title: "Mark The Calendar",
               icon: <FaCalendarAlt size={40} className="text-orange-600" />,
-              description: "We require a 40% deposit to book your date on our calendar.",
+              description:
+                "We require a 40% deposit to book your date on our calendar.",
             },
             {
               title: "Event Day!",
               icon: <FaBirthdayCake size={40} className="text-orange-600" />,
-              description: "We arrive and install everything on your big day! not to worry",
-            }
+              description:
+                "We arrive and install everything on your big day! not to worry",
+            },
           ]}
         />
 
+        <Services />
+        <Testimonial />
+        <Work />
         <FAQ />
       </motion.div>
     </div>
