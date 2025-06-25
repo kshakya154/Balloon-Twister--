@@ -20,7 +20,7 @@ import Gallery from "./components/Gallery";
 import SingleBlog from "./components/Blog/SingleBlog";
 // import ServiceCard from "./components/ServiceCard";
 import DollyPage from "./components/DollyPage"; 
-
+import Landing from "../pages/Landing";
 import ServicesPage from "../pages/ServicePage";
 import ServiceDetails from "../pages/ServiceDetails";
 function App() {
@@ -29,6 +29,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/landing" element={<Landing/>} />
         <Route path="/about" element={<About />} />
         <Route path="/booking" element={<Booking />} />
         {/* <Route path="/services" element={<Services />} /> */}
