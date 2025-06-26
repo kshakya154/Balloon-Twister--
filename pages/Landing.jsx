@@ -86,7 +86,10 @@ const LandingPage = () => {
           balloon decorations and event decor services. From vibrant backdrops
           to stunning centerpieces, we bring your vision to life.
         </p>
-        <Link to="/" className="bg-gray-900 text-white px-6 py-3 rounded mt-20 hover:bg-[#cfae60] transition duration-300">
+        <Link
+          to="/"
+          className="bg-gray-900 text-white px-6 py-3 rounded mt-20 hover:bg-[#cfae60] transition duration-300"
+        >
           Discover the Magic
         </Link>
       </section>
@@ -144,6 +147,73 @@ const LandingPage = () => {
             alt="Balloon decor 2"
             className="rounded-lg shadow-md"
           />
+        </div>
+      </section>
+
+      {/* services Section */}
+
+      <section className="bg-gray-900 text-white py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-orange-500 text-center mb-10">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Birthday",
+                image: "/images/h3.jpg",
+                content:
+                  "Celebrate with vibrant balloon decor and joyful vibes!",
+              },
+              {
+                title: "Corporate Events",
+                image: "/images/h6.jpg",
+                content:
+                  "Add flair to your events with our classy balloon setups.",
+              },
+              {
+                title: "Baby Shower",
+                image: "/images/h8.jpg",
+                content:
+                  "Make your baby shower unforgettable with our cute designs.",
+              },
+              {
+                title: "Anniversary",
+                image: "/images/h10.jpg",
+                content:
+                  "Celebrate love with elegant and romantic balloon designs.",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-gray-800 rounded-2xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-orange-500/40 transition-shadow duration-300"
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-32 h-32 object-cover rounded-full mb-4"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-orange-400">
+                  {service.title}
+                </h3>
+                <p className="text-sm mb-4">{service.content}</p>
+                <Link
+                  to={`/services/${service.title}`}
+                  className="mt-auto bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+                >
+                  Learn More
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              to="/services"
+              className="bg-orange-500 px-6 py-3 text-white rounded-lg hover:bg-orange-600"
+            >
+              View All Services
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -307,7 +377,10 @@ const LandingPage = () => {
         <h2 className="text-2xl md:text-3xl font-semibold text-white mb-10">
           Ready to Create Something Magical?
         </h2>
-        <Link to="/" className="mt-6 bg-[#1f2d53] text-white px-6 py-3 rounded hover:bg-[#152041] transition duration-300">
+        <Link
+          to="/"
+          className="mt-6 bg-[#1f2d53] text-white px-6 py-3 rounded hover:bg-[#152041] transition duration-300"
+        >
           Discover More
         </Link>
       </section>
