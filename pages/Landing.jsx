@@ -78,7 +78,7 @@ const LandingPage = () => {
         </p>
         <Link
           to="/"
-          className="bg-gray-900 text-white px-6 py-3 rounded mt-20 hover:bg-[#cfae60] transition duration-300"
+          className="bg-gray-900 text-white px-6 py-3 rounded mt-20 hover:bg-[#cfae60] hover:text-black transition duration-300"
         >
           Discover the Magic
         </Link>
