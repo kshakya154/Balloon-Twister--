@@ -19,18 +19,20 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Gallery from "./components/Gallery";
 import SingleBlog from "./components/Blog/SingleBlog";
 // import ServiceCard from "./components/ServiceCard";
-import DollyPage from "./components/DollyPage"; 
+import DollyPage from "./components/DollyPage";
 import Landing from "../pages/Landing";
 import ServicesPage from "../pages/ServicePage";
 import ServiceDetails from "../pages/ServiceDetails";
+import LandingPage from "../pages/Landing";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/landing" element={<Landing/>} />
+        <Route path="/landing" element={<Landing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/landing" element={<LandingPage />} />
         <Route path="/booking" element={<Booking />} />
         {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/blog" element={<Blog />} />
@@ -41,10 +43,8 @@ function App() {
         <Route path="/services/:service" element={<ServiceDetails />} />
         <Route path="/booking" element={<div>Booking Page</div>} />
         <Route path="/blog/:id" element={<SingleBlog />} />
-        <Route path="/dolly" element={<DollyPage/>} />
+        <Route path="/dolly" element={<DollyPage />} />
         {/* <Route path="/services" element={<ServicesPage />} /> */}
-
-        
 
         {/* Protect the /addblog route */}
         <Route

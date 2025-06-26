@@ -6,7 +6,8 @@ import { GiBalloons } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // ✅ fixed from react-router to react-router-dom
+
 const LandingPage = () => {
   const {
     register,
@@ -19,7 +20,6 @@ const LandingPage = () => {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [backendError, setBackendError] = useState("");
 
   const onSubmit = async (data) => {
@@ -27,13 +27,16 @@ const LandingPage = () => {
       setBackendError("");
       setIsSubmitting(true);
 
-      const response = await fetch("http://localhost:4000/landing", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://backend-balloon-twister.onrender.com/contact", // ✅ corrected endpoint
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
 
@@ -55,29 +58,16 @@ const LandingPage = () => {
     }
   };
 
-  {
-    backendError && (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="bg-red-600 text-white p-3 rounded mb-4"
-      >
-        {backendError}
-      </motion.div>
-    );
-  }
-
   const handleSubjectChange = (value) => {
     setSelectedSubject(value);
     setValue("subject", value);
   };
+
   return (
     <div className="font-sans bg-gray-900 text-white mt-18">
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-20 text-center bg-[url('https://images.unsplash.com/photo-1560128411-79892dd93bf8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFsbG9vbiUyMGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D')] bg-cover bg-center">
-        <h2 className="text-xl md:text-2xl tracking-wide">
-          Elevate Your Celebrations
-        </h2>
+        <h2 className="text-xl md:text-2xl tracking-wide">Elevate Your Celebrations</h2>
         <h1 className="text-4xl md:text-6xl font-bold text-gray-700 leading-tight my-6">
           Embrace the Magic
         </h1>
@@ -94,7 +84,7 @@ const LandingPage = () => {
         </Link>
       </section>
 
-      {/* custom qoute section */}
+      {/* Custom Quote */}
       <CustomQoute
         subheading="Make an Entrance They'll Never Forget"
         heading="Fill out enquiry form"
@@ -104,84 +94,63 @@ const LandingPage = () => {
           {
             title: "Fill Out Inquiry Form",
             icon: <FaClipboardList size={40} className="text-orange-600" />,
-            description:
-              "Click below to fill out our inquiry form and we will get back to you",
+            description: "Click below to fill out our inquiry form and we will get back to you",
           },
           {
             title: "Discuss Your Vision",
             icon: <GiBalloons size={40} className="text-orange-600" />,
-            description:
-              "We’ll discuss your event and pricing in further detail with you",
+            description: "We’ll discuss your event and pricing in further detail with you",
           },
           {
             title: "Mark The Calendar",
             icon: <FaCalendarAlt size={40} className="text-orange-600" />,
-            description:
-              "We require a 40% deposit to book your date on our calendar.",
+            description: "We require a 40% deposit to book your date on our calendar.",
           },
           {
             title: "Event Day!",
             icon: <FaBirthdayCake size={40} className="text-orange-600" />,
-            description:
-              "We arrive and install everything on your big day! not to worry",
+            description: "We arrive and install everything on your big day! not to worry",
           },
         ]}
       />
 
-      {/* Showcase Section */}
+      {/* Showcase */}
       <section className="py-16 px-4 text-center">
         <h2 className="text-3xl font-semibold mb-4">Elevate Your Events</h2>
         <p className="max-w-xl mx-auto text-white mb-10">
-          Unleash the magic of balloons and transform your events into
-          extraordinary experiences. Our team of experts will work closely with
-          you to curate personalized decor that leaves a lasting impression.
+          Unleash the magic of balloons and transform your events into extraordinary experiences.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <img
-            src="images/v2.jpg"
-            alt="Balloon decor 1"
-            className="rounded-lg shadow-md"
-          />
-          <img
-            src="images/v3.jpg"
-            alt="Balloon decor 2"
-            className="rounded-lg shadow-md"
-          />
+          <img src="images/v2.jpg" alt="Balloon decor 1" className="rounded-lg shadow-md" />
+          <img src="images/v3.jpg" alt="Balloon decor 2" className="rounded-lg shadow-md" />
         </div>
       </section>
 
-      {/* services Section */}
-
+      {/* Services */}
       <section className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-orange-500 text-center mb-10">
-            Our Services
-          </h2>
+          <h2 className="text-3xl font-bold text-orange-500 text-center mb-10">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Birthday",
                 image: "/images/h3.jpg",
-                content:
-                  "Celebrate with vibrant balloon decor and joyful vibes!",
+                content: "Celebrate with vibrant balloon decor and joyful vibes!",
               },
               {
                 title: "Corporate Events",
                 image: "/images/h6.jpg",
-                content:
-                  "Add flair to your events with our classy balloon setups.",
+                content: "Add flair to your events with our classy balloon setups.",
               },
               {
                 title: "Baby Shower",
                 image: "/images/h8.jpg",
-                content:
-                  "Make your baby shower unforgettable with our cute designs.",
+                content: "Make your baby shower unforgettable with our cute designs.",
               },
               {
                 title: "Anniversary",
                 image: "/images/h10.jpg",
-                content:
-                  "Celebrate love with elegant and romantic balloon designs.",
+                content: "Celebrate love with elegant and romantic balloon designs.",
               },
             ].map((service, index) => (
               <div
@@ -193,9 +162,7 @@ const LandingPage = () => {
                   alt={service.title}
                   className="w-32 h-32 object-cover rounded-full mb-4"
                 />
-                <h3 className="text-xl font-semibold mb-2 text-orange-400">
-                  {service.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2 text-orange-400">{service.title}</h3>
                 <p className="text-sm mb-4">{service.content}</p>
                 <Link
                   to={`/services/${service.title}`}
@@ -217,63 +184,37 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery */}
       <section className="py-16 bg-gray-900 px-4">
-        <h2 className="text-3xl font-semibold text-center mb-10">
-          Balloons that Captivate
-        </h2>
+        <h2 className="text-3xl font-semibold text-center mb-10">Balloons that Captivate</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <img
-            src="/images/h7.jpg"
-            alt="Balloon 1"
-            className="rounded-lg shadow-md"
-          />
-          <img
-            src="/images/h12.jpg"
-            alt="Balloon 2"
-            className="rounded-lg shadow-md"
-          />
-          <img
-            src="/images/h4.jpg"
-            alt="Balloon 3"
-            className="rounded-lg shadow-md"
-          />
+          <img src="/images/h7.jpg" alt="Balloon 1" className="rounded-lg shadow-md" />
+          <img src="/images/h12.jpg" alt="Balloon 2" className="rounded-lg shadow-md" />
+          <img src="/images/h4.jpg" alt="Balloon 3" className="rounded-lg shadow-md" />
         </div>
-
         <div className="text-center mt-10 text-2xl hover:text-blue-300">
           <Link to="/gallery">View all Collection</Link>
         </div>
       </section>
 
-      {/* Personalization Section */}
+      {/* Personalization */}
       <section className="py-20 bg-gray-900 text-white px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Personalized Perfection</h2>
           <p className="text-gray-300 mb-10">
-            Elevate your events with our exceptional balloon decorations and
-            event decor services. Our team of skilled professionals will work
-            closely with you to bring your vision to life, crafting stunning
-            displays that captivate and delight your guests.
+            Elevate your events with our exceptional balloon decorations and event decor services.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <img
-              src="/images/h2.jpg"
-              alt="Decor 1"
-              className="rounded-lg shadow-md"
-            />
-            <img
-              src="/images/h5.jpg"
-              alt="Decor 2"
-              className="rounded-lg shadow-md"
-            />
+            <img src="/images/h2.jpg" alt="Decor 1" className="rounded-lg shadow-md" />
+            <img src="/images/h5.jpg" alt="Decor 2" className="rounded-lg shadow-md" />
           </div>
         </div>
       </section>
 
-      {/* <!-- Testimonials Section --> */}
+      {/* Testimonials */}
       <Testimonial />
 
-      {/* Contact Form Section */}
+      {/* Contact Form */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -292,6 +233,16 @@ const LandingPage = () => {
           </motion.div>
         )}
 
+        {backendError && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="bg-red-600 text-white p-3 rounded mb-4"
+          >
+            {backendError}
+          </motion.div>
+        )}
+
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <div>
             <label>Name</label>
@@ -300,9 +251,7 @@ const LandingPage = () => {
               className="w-full p-2 bg-gray-700 rounded mt-1 text-white"
               placeholder="Your name"
             />
-            {errors.Name && (
-              <p className="text-red-500">{errors.Name.message}</p>
-            )}
+            {errors.Name && <p className="text-red-500">{errors.Name.message}</p>}
           </div>
 
           <div>
@@ -319,9 +268,7 @@ const LandingPage = () => {
               className="w-full p-2 bg-gray-700 rounded mt-1 text-white"
               placeholder="you@example.com"
             />
-            {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
           </div>
 
           <div>
@@ -339,9 +286,7 @@ const LandingPage = () => {
                 </label>
               ))}
             </div>
-            {errors.subject && (
-              <p className="text-red-500">{errors.subject.message}</p>
-            )}
+            {errors.subject && <p className="text-red-500">{errors.subject.message}</p>}
           </div>
 
           <div>
@@ -352,9 +297,7 @@ const LandingPage = () => {
               rows="4"
               placeholder="Type your message..."
             ></textarea>
-            {errors.message && (
-              <p className="text-red-500">{errors.message.message}</p>
-            )}
+            {errors.message && <p className="text-red-500">{errors.message.message}</p>}
           </div>
 
           <motion.button
@@ -362,9 +305,7 @@ const LandingPage = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={`w-full py-2 rounded font-semibold transition ${
-              isSubmitting
-                ? "bg-green-600"
-                : "bg-orange-600 hover:bg-orange-700"
+              isSubmitting ? "bg-green-600" : "bg-orange-600 hover:bg-orange-700"
             }`}
           >
             {isSubmitting ? "Message Sent" : "Send Message"}
@@ -372,7 +313,7 @@ const LandingPage = () => {
         </form>
       </motion.div>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-16 text-center bg-[#f8ebe9] bg-[url('/images/img1.png')] bg-cover bg-center text-white px-4">
         <h2 className="text-2xl md:text-3xl font-semibold text-white mb-10">
           Ready to Create Something Magical?
