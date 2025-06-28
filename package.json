@@ -28,7 +28,9 @@
     "react-parallax": "^3.5.2",
     "react-router": "^7.4.0",
     "react-router-dom": "^7.4.0",
+    "react-slick": "^0.30.3",
     "react-slideshow-image": "^4.3.2",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.8",
     "tailwindcss": "^4.0.15"
   },
