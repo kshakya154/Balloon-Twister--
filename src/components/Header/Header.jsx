@@ -15,7 +15,7 @@ function Header() {
     "Contact",
     "Blog",
     "Gallery",
-    "Dolly Car",
+    "Wedding Car",
   ];
 
   return (
@@ -68,7 +68,7 @@ function Header() {
                   to={
                     nav === "Home"
                       ? "/"
-                      : nav === "Dolly Car"
+                      : nav === "Wedding Car"
                       ? "/dolly"
                       : `/${nav.toLowerCase()}`
                   }

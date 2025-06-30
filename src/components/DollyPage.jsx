@@ -69,15 +69,15 @@ const DollyPage = () => {
         <DollySlider />
         <div className="absolute inset-0 flex items-center justify-center backdrop-blur-[1px] bg-black/40">
           <h1 className="text-3xl md:text-5xl font-bold text-white text-center shadow-xl px-6 py-4 rounded-xl">
-            Arrive in Style on Your Big Day With - Dolly Wedding Cars.
+            Arrive in Style on Your Big Day With - Wedding Cars.
           </h1>
         </div>
       </motion.div>
 
       <CustomQoute
         subheading="Make an Entrance They'll Never Forget"
-        heading="Dolly Car Booking Process"
-        buttonText="Book Your Dolly Now"
+        heading="Wedding Car Booking Process"
+        buttonText="Book Your Wedding Car Now"
         buttonLink="#form"
         steps={[
           {
@@ -101,7 +101,7 @@ const DollyPage = () => {
             title: "Celebrate in Style! with us",
             icon: <FaBirthdayCake size={40} className="text-orange-600" />,
             description:
-              "Your dolly car will arrive decorated and ready to go!",
+              "Your Wedding car will arrive decorated and ready to go!",
           },
         ]}
       />
@@ -109,14 +109,14 @@ const DollyPage = () => {
       {/* Pricing Section */}
       <div className="bg-gray-800 rounded-3xl shadow-lg text-white py-12 px-6 mt-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-orange-500">
-          Pricing & Dolly Car Options
+          Pricing & Wedding Car Options
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Basic Package */}
           <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
             <FaCarSide size={40} className="text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Classic Dolly</h3>
+            <h3 className="text-xl font-semibold mb-2">Classic Car</h3>
             <p className="mb-4 text-gray-300">
               Simple floral decoration, suitable for birthdays or school
               functions.
@@ -127,7 +127,7 @@ const DollyPage = () => {
           {/* Premium Package */}
           <div className="bg-orange-700 p-6 rounded-xl text-center text-white shadow-2xl scale-105">
             <FaCrown size={40} className="text-white mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Premium Dolly</h3>
+            <h3 className="text-xl font-semibold mb-2">Premium Car</h3>
             <p className="mb-4 text-orange-100">
               Themed setup, lights, music, and moderate floral decor. Perfect
               for weddings.
@@ -138,7 +138,7 @@ const DollyPage = () => {
           {/* Luxury Package */}
           <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
             <FaStar size={40} className="text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Luxury Dolly</h3>
+            <h3 className="text-xl font-semibold mb-2">Luxury Car</h3>
             <p className="mb-4 text-gray-300">
               Fully customized car, AC, deluxe props, drapes & photo-ready
               decor.
@@ -158,17 +158,17 @@ const DollyPage = () => {
         >
           <p>
             At Balloon Bliss, we believe every celebration deserves a grand
-            entrance — and nothing does it better than our Dolly Car Booking
+            entrance — and nothing does it better than our Wedding Car Booking
             service. Whether it's a bride's royal arrival, a child’s magical
             birthday entry, or a divine procession for religious or cultural
-            events, our beautifully decorated dolly cars are designed to turn
-            heads and leave lasting impressions. Each dolly car is thoughtfully
+            events, our beautifully decorated Weddding cars are designed to turn
+            heads and leave lasting impressions. Each Wedding car is thoughtfully
             customized with premium decorations like vibrant flowers, fairy
             lights, elegant fabric drapes, themed cutouts, and unique props
-            tailored specifically to your event. Want a princess-themed dolly
+            tailored specifically to your event. Want a princess-themed Wedding
             car for your daughter’s birthday? Or a majestic, traditional setup
             for a wedding? We’ve got it covered. Our fleet includes various
-            dolly car styles — from open-top floral wagons to enclosed,
+            Wedding car styles — from open-top floral wagons to enclosed,
             air-conditioned mini-chariots — all maintained with the highest
             standards of safety and hygiene. Our professional team ensures
             timely delivery, setup, and smooth operation throughout the event.
@@ -176,13 +176,13 @@ const DollyPage = () => {
             banners to add that extra sparkle to your celebration. Perfect for
             weddings, birthdays, anniversaries, pre-wedding shoots, dholki
             nights, baby showers, mata ki chowki, jagrata processions, and more
-            — our dolly cars are not just transport but an experience. With
+            — our Wedding cars are not just transport but an experience. With
             flexible packages, easy booking options, and doorstep delivery, we
             take the stress out of planning and bring the joy straight to you.
             Let your loved ones shine and be the center of attention as they
             ride in elegance.
             <span className="block mt-4 font-semibold text-orange-400">
-              Book your dolly car with Balloon Bliss today and make your
+              Book your Wedding car with Balloon Bliss today and make your
               celebration truly memorable!
             </span>
           </p>
@@ -269,8 +269,8 @@ const DollyPage = () => {
             {loading
               ? "Submitting..."
               : success
-              ? "Dolly Reserved Successfully!"
-              : "Reserve Your Dolly"}
+              ? "Wedding Car Reserved Successfully!"
+              : "Reserve Your Wedding Car"}
           </button>
         </motion.form>
       </div>
