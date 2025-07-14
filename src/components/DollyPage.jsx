@@ -29,7 +29,7 @@ const DollyPage = () => {
     setSuccess(false);
     try {
       const response = await fetch(
-        "https://backend-balloon-twister.onrender.com/dolly",
+        "https://backend-balloon-twister.onrender.com/wedding-car",
         {
           method: "POST",
           headers: {
