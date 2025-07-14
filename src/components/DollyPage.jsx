@@ -107,43 +107,31 @@ const DollyPage = () => {
       />
 
       {/* Pricing Section */}
-      <div className="bg-gray-800 rounded-3xl shadow-lg text-white py-12 px-6 mt-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-orange-500">
-          Pricing & Wedding Car Options
+      <div className="bg-gray-800 rounded-3xl shadow-lg text-white py-16 px-6 mt-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-orange-500">
+          Wedding Car Pricing
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Basic Package */}
-          <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
-            <FaCarSide size={40} className="text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Classic Car</h3>
-            <p className="mb-4 text-gray-300">
-              Simple floral decoration, suitable for birthdays or school
-              functions.
-            </p>
-            <p className="text-2xl font-bold text-orange-400">₹2,999</p>
-          </div>
+        <div className="flex justify-center">
+          <div className="relative group w-full max-w-sm bg-gradient-to-br from-orange-600 to-orange-400 p-1 rounded-3xl hover:scale-105 transform transition-all duration-500 shadow-2xl">
+            <div className="bg-gray-900 p-8 rounded-3xl text-center h-full">
+              <div className="animate-bounce">
+                <FaCarSide size={50} className="text-orange-300 mx-auto mb-4" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-white">
+                Starts from
+              </h3>
+              <p className="text-4xl font-bold text-orange-300 mb-4">₹599</p>
+              <p className="text-sm text-gray-300">
+                Affordable wedding car decoration packages tailored to your
+                event.
+              </p>
+            </div>
 
-          {/* Premium Package */}
-          <div className="bg-orange-700 p-6 rounded-xl text-center text-white shadow-2xl scale-105">
-            <FaCrown size={40} className="text-white mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Premium Car</h3>
-            <p className="mb-4 text-orange-100">
-              Themed setup, lights, music, and moderate floral decor. Perfect
-              for weddings.
-            </p>
-            <p className="text-2xl font-bold text-white">₹5,999</p>
-          </div>
-
-          {/* Luxury Package */}
-          <div className="bg-gray-900 p-6 rounded-xl text-center border border-orange-600 hover:shadow-xl transition">
-            <FaStar size={40} className="text-orange-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Luxury Car</h3>
-            <p className="mb-4 text-gray-300">
-              Fully customized car, AC, deluxe props, drapes & photo-ready
-              decor.
-            </p>
-            <p className="text-2xl font-bold text-orange-400">₹9,999</p>
+            {/* Hover Shine Effect */}
+            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-10 transition duration-700">
+              <div className="w-full h-full bg-gradient-to-br from-white to-transparent animate-pulse rounded-3xl" />
+            </div>
           </div>
         </div>
       </div>
@@ -162,25 +150,25 @@ const DollyPage = () => {
             service. Whether it's a bride's royal arrival, a child’s magical
             birthday entry, or a divine procession for religious or cultural
             events, our beautifully decorated Weddding cars are designed to turn
-            heads and leave lasting impressions. Each Wedding car is thoughtfully
-            customized with premium decorations like vibrant flowers, fairy
-            lights, elegant fabric drapes, themed cutouts, and unique props
-            tailored specifically to your event. Want a princess-themed Wedding
-            car for your daughter’s birthday? Or a majestic, traditional setup
-            for a wedding? We’ve got it covered. Our fleet includes various
-            Wedding car styles — from open-top floral wagons to enclosed,
-            air-conditioned mini-chariots — all maintained with the highest
-            standards of safety and hygiene. Our professional team ensures
-            timely delivery, setup, and smooth operation throughout the event.
-            We even offer music options, lighting effects, and personalized
-            banners to add that extra sparkle to your celebration. Perfect for
-            weddings, birthdays, anniversaries, pre-wedding shoots, dholki
-            nights, baby showers, mata ki chowki, jagrata processions, and more
-            — our Wedding cars are not just transport but an experience. With
-            flexible packages, easy booking options, and doorstep delivery, we
-            take the stress out of planning and bring the joy straight to you.
-            Let your loved ones shine and be the center of attention as they
-            ride in elegance.
+            heads and leave lasting impressions. Each Wedding car is
+            thoughtfully customized with premium decorations like vibrant
+            flowers, fairy lights, elegant fabric drapes, themed cutouts, and
+            unique props tailored specifically to your event. Want a
+            princess-themed Wedding car for your daughter’s birthday? Or a
+            majestic, traditional setup for a wedding? We’ve got it covered. Our
+            fleet includes various Wedding car styles — from open-top floral
+            wagons to enclosed, air-conditioned mini-chariots — all maintained
+            with the highest standards of safety and hygiene. Our professional
+            team ensures timely delivery, setup, and smooth operation throughout
+            the event. We even offer music options, lighting effects, and
+            personalized banners to add that extra sparkle to your celebration.
+            Perfect for weddings, birthdays, anniversaries, pre-wedding shoots,
+            dholki nights, baby showers, mata ki chowki, jagrata processions,
+            and more — our Wedding cars are not just transport but an
+            experience. With flexible packages, easy booking options, and
+            doorstep delivery, we take the stress out of planning and bring the
+            joy straight to you. Let your loved ones shine and be the center of
+            attention as they ride in elegance.
             <span className="block mt-4 font-semibold text-orange-400">
               Book your Wedding car with Balloon Bliss today and make your
               celebration truly memorable!

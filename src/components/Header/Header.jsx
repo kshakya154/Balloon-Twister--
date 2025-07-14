@@ -69,7 +69,7 @@ function Header() {
                     nav === "Home"
                       ? "/"
                       : nav === "Wedding Car"
-                      ? "/dolly"
+                      ? "/wedding-car"
                       : `/${nav.toLowerCase()}`
                   }
                   onClick={() => setIsOpen(false)}

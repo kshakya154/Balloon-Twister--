@@ -43,7 +43,7 @@ function App() {
         <Route path="/services/:service" element={<ServiceDetails />} />
         <Route path="/booking" element={<div>Booking Page</div>} />
         <Route path="/blog/:id" element={<SingleBlog />} />
-        <Route path="/dolly" element={<DollyPage />} />
+        <Route path="/Wedding-Car" element={<DollyPage />} />
         {/* <Route path="/services" element={<ServicesPage />} /> */}
 
         {/* Protect the /addblog route */}
